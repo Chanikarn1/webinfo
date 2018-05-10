@@ -1,0 +1,239 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title> On my way </title>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mitr:300,400" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/css/bg.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+table,h1{
+font-family:'Bowlby One SC', cursive;
+font-size:40px;
+color: #FFC125;
+
+}
+p{font-family:'Mitr', sans-serif;
+font-size:16px;}
+h4{font-family:'Mitr', sans-serif;
+}
+font,button
+{font-family:'Mitr', sans-serif;
+}
+.button:hover{
+  background:#FF3300;
+}
+.button{
+
+  cursor:pointer;
+  border-radius:10px;
+  width:37.5%;
+   height:20%;
+   color: white;
+   font-weight: bold;
+   font-size: 16px;
+    font-family: 'Abel', sans-serif;
+
+background-color:#CC3300;
+box-shadow: 0 2px #999;}
+</style>
+</head>
+<body >
+
+
+  <div style="margin-left:10%;"><img src="/static/logo2.png"  >
+  </div>
+
+
+  <div class="navbar" >
+    <a  class="onemenu" href="index.html" >หน้าแรก</a>
+    <a href="travel.html" style="margin-left:0px;" >รีวิวสถานที่ท่องเที่ยว</a>
+
+    <div class="dropdown">
+     <button class="dropbtn">อีเวนท์
+       <i class="fa fa-caret-down"></i>
+     </button>
+     <div class="dropdown-content">
+       <a href="event.html" >งานอีเวนท์</a>
+       <a href="join.html">หากลุ่มร่วมทริป</a>
+
+     </div>
+   </div>
+   <div class="dropdown">
+    <button class="dropbtn" >ติดต่อ
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="about_us.html" >เกี่ยวกับเรา</a>
+      <a href="contact.html">ติดต่อ</a>
+
+    </div>
+  </div>
+  </div>
+
+<div class="bg"  style="height:400%;">
+
+  <div class="w3-content w3-display-container" style="max-heigth:100%;">
+
+
+
+    <img class="mySlides w3-animate-fading " src="/static/tabong.jpg" style="width:100%">
+    <img class="mySlides w3-animate-fading" src="/static/khao3.jpg" style="width:100%">
+    <img class="mySlides w3-animate-fading" src="/static/DSC_0017.jpg" style="width:100%">
+    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+      <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+      <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    </div>
+  </div>
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " w3-white";
+  }
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 8000); // Change image every 2 seconds
+}
+  </script>
+<div id="top"style="width:100%;height:30%;background-color:#2F4F4F;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><br>
+<center>
+<table border="0">
+  <tr>
+<td><center><img src="/static/review.png"style="width:50%;"></center></td>
+<td><center><img src="/static/event.png"style="width:50%;"></center></td>
+<td><center><img src="/static/friends.png"style="width:50%;"></center></td>
+</tr>
+  <tr>
+    <td style="padding:5% 5%;"><center>Review</td></center>
+  <td style="padding:5% 5%;"><center>Events</td></center>
+<td style="padding:5% 5%;"><center>Join Group</td></center>
+</tr>
+</table>
+</center>
+
+<center><hr width=10% size=10 color=white> </center>
+<div style="width:100%;height:20%;">
+  <center><h1 style="font-size:20px;color:#FF6A6A;">Follow Us !</h1>
+  <a href="#fb"><img src="/static/fb.png" style="margin-right:5%;"></a><a href="#fb"><img src="/static/tw.png"style="margin-right:5%;"></a>
+    <a href="#fb"><img src="/static/ig.png"></a></center>
+</div>
+<center><div style="width:40%;height:25%;background-color:#4b7d7d;border-radius:15px;z-index:300;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <br><font>รับข่าวสารเกี่ยวกับสถานที่ใหม่<br>
+
+กรอก E-mail ด้านล่างเพื่อรับข่าวสารสถานที่ท่องเที่ยวใหม่ๆจากเรา</font><br><br>
+<form>
+<input type="text" id="Email" name="Email" placeholder="YourEmail" maxlength="25"style="border-radius:8px;width:80%;"><br><br>
+<button class="button" >Submit</button>
+</form>
+</div></center></div>
+
+
+<div class="recommend "style="margin-left:10%;">
+<h1 style="text-decoration:underline">Reccommend</h1><br>
+<div class="w3-container">
+<a href="/static/krabi.html" target="_blank"style="text-decoration:none;"><div class="w3-card-4" style="width:25%;">
+    <img src="/static/krabi.jpg" alt="krabi" style="width:100%">
+    <div class="w3-container">
+      <h4><b>ทะเลแหวก</b></h4>
+      <p>Unseen Thailand อีกแห่งหนึ่งของประเทศไทย ทะเลแหวก เป็นปรากฏการณ์ที่เกิดจาก อิทธิพลของน้ำขึ้นและน้ำลง ทำให้สันทรายของเกาะทั้ง 3 คือ เกาะทับ เกาะหม้อ
+      ปรากฏขึ้นกลายเป็นหาดทรายขาว เชื่อมกันทั้งสามเกาะอย่างน่าอัศจรรย์ โดยจะเกิดเฉพาะในวันก่อนและหลังวันขึ้น15 ค่ำ ราว 5 วัน
+     </p>
+   </div></a>
+  </div>
+  <br>
+
+
+  <a href="sutongpe.html" target="_blank"style="text-decoration:none;"><div class="w3-card-4" style="width:25%;float:right; margin-top:-38.5%;margin-right:43%;">
+    <img src="/static/sutongpea.jpg" alt="สะพานซูตองเป้" style="width:100%">
+    <div class="w3-container">
+      <h4><b>สะพานซูตองเป้</b></h4>
+      <p>" สะพานแห่งศรัทธา " สะพานซูตองเป้ อ.เมือง จ.แม่ฮ่องสอน ห่างจากตัวเมืองไปประมาณ 8 กิโลเมตร
+       สะพานซูตองเป้ เป็นสะพานไม้ ส่วนพื้นปูด้วยไม้ไผ่ที่ทำในลักษณะพื้นสับฟาก พื้นขัดแตะ
+        และพื้นไม้ไผ่สาน มีความกว้างประมาณ 2 เมตร แต่ยาวถึง 500 เมตร ซึ่งได้รับการยกย่องให้เป็นสะพานไม้ไผ่ที่ยาวที่สุดในเมืองไทย </p>
+    </div>
+  </div></a>
+  <a href="cha2000.html"target="_blank" style="text-decoration:none;"><div class="w3-card-4" style="width:25%;float:right; margin-top:-38.5%;margin-right:10%;">
+    <img src="/static/doichiangmai.jpg" alt="อ่างขาง" style="width:100%">
+    <div class="w3-container">
+      <h4><b>ไร่ชา 2000</b></h4>
+      <p>"ไร่ชา 2000" อีกหนึ่งจุดท่องเที่ยวที่มี<br>ความงดงามเป็นจุดชมพระอาทิตย์ขึ้นเคล้าสายหมอก ได้เห็นบรรยากาศของริ้วลายของแปลงชาไล่ระดับในมุมสูง
+ ไร่ชาสองพันตั้งอยู่บนดอยอ่างขาง อ.ฝาง จ.เชียงใหม่  หากมาเที่ยวที่นี่ให้ได้บรรยากาศงดงามควรมาถึงประมาณเวลา <br>6.30 น.</p>
+    </div>
+  </div><a>
+</div>
+</div>
+<br><br>
+<div width="100%" height="50%;"><br>
+  <h1 style="text-decoration:underline;margin-left:10%;">Review</h1><br>
+<div style="margin-left:10%;">
+<img src="/static/tao8.jpg" style="width:30%;height:9%;">
+<img src="/static/mon1.jpg"style="width:30%;">
+<img src="/static/chang2.jpg"style="width:30%;"></div>
+<div style="margin-left:20%;"><p>เกาะเต่า&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  ดอยม่อนจอง&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+เกาะช้าง</p>
+
+</div>
+
+
+
+</div>
+
+</div>
+<footer id="footer">
+<a href="#top"><img src="/static/arrow.png" style="margin-left:5px;margin-top:8px;"></a>
+</footer>
+
+
+
+
+</body>
+
+</html>
