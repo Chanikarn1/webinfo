@@ -1,132 +1,120 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title> On my way </title>
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Mitr:300,400" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/static/css/bg.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-#map {
-       height: 400px;
-       width: 100%;
-       border: 10px;
+body {font-family: Arial, Helvetica, sans-serif;height: 100%;width: 100%}
 
-      }
-
-.button:hover{
-  background:#FF3300;
-}
-.button{
-  cursor:pointer;
-  border-radius:10px;
-  width:37.5%;
-   height:8%;
-   color: white;
-   font-weight:bold;
-   font-size:20px;
-    font-family:'Abel', sans-serif;
-margin-left:35%;
-background-color:#CC3300;
-box-shadow: 0 2px #999;}
-
-input::placeholder ,textarea ,input{
-  font-size: 20px;
-font-family: 'Abel', sans-serif;}
-.contact img {
-  width: 5%;
-  height: auto;
-margin-right: 3%;
-
-}
-.contact font{
-  font-size: 36px;
+input[type=text], select, textarea {
+   
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
+input[type=submit] {
+    width:100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.container-contact{
+    border-radius: 5px;
+    background-color:#00CED1;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 2.5%;
+    padding-top: 1%;
+    margin-right: 40%;
+    margin-left: 10%;
+}
+.box-input{
+
+  margin-right:10%;
+  
+}
+.box{
+  width:70%;
+  
+}
+.container-small{
+    width:30%;
+    height:50%;
+    border-radius: 5px;
+    background-color:#FA8072;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-bottom: 2.5%;
+    padding-top: 1%;
+    margin-right: 10%; 
+    margin-left: 50%;
+    margin-top: -25%;
+    
+
+}
 
 </style>
 </head>
-<body >
+<body>
 
 
-  <div style="margin-left:10%;"><img src="/static/logo2.png"  >
-  </div>
 
+<div class="container-contact">
+    <div class="box-input">
+      <form action="/action_page.php">
+      
+        <div class="box">
+          <label for="fname"><h2>Send Us your Feedback</h2></label>
+        </div>
 
-  <div class="navbar" >
-    <a  class="onemenu" href="index.html" >หน้าแรก</a>
-    <a href="travel.html" style="margin-left:0px;" >รีวิวสถานที่ท่องเที่ยว</a>
+        <div class="box">
+          <input type="text" id="fname" name="firstname" placeholder=Name>
+        </div>
 
-    <div class="dropdown">
-     <button class="dropbtn">อีเวนท์
-       <i class="fa fa-caret-down"></i>
-     </button>
-     <div class="dropdown-content">
-       <a href="event.html" >งานอีเวนท์</a>
-       <a href="join.html">หากลุ่มร่วมทริป</a>
+        <div class="box">
+          <input type="text" id="lname" name="lastname" placeholder=Email>
+        </div>
 
-     </div>
-   </div>
+        <div class="box">
+          <textarea id="subject" name="subject" placeholder=Message style="height:200px"></textarea>
+        </div>
 
-   <div class="dropdown">
-    <button class="dropbtn" >ติดต่อ
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="about us.html" >เกี่ยวกับเรา</a>
-      <a href="contact.html">ติดต่อ</a>
-
-    </div>
-  </div>
-  </div>
-<div class="bg" id="top"style="background-color:white;">
-
-  <div class="content" style="margin-left:2%;margin-right:2%;">
-    <div style="width:100%;height:100%;">
-<div class="contact" style=" width:50%; height:100%;float:left;">
-  <h1 style="font-size:60;color:#104E8B;">CONTACT<h1>
-    <div style="margin-left:4%;">
-    <img src="/static/telephone.png" ><font>088-8343220</font><br><br>
-    <img src="/static/facebook.png" ><font>Chanikan Rujimetineekul</font><br><br>
-    <img src="/static/envelope.png" ><font>57010248@kmitl.ac.th</font><br><br>
-    <span><img src="/static/placeholder.png" ><font style="font-size:32px;">King Mongkut's Institute of <br><dd>Technology Ladkrabang.<br><dd>Chalongkrung Rd. Ladkrabang,<br><dd>Bangkok Thailand 10520</font><br></span>
-    </div>
-</div>
-<div class="message" style=" width:50%; height:100%; float:right">
-    <h1 style="font-size:60; color:#104E8B;">LEAVE A MESSAGE<h1>
-      <div style="margin-left:12.5%; ">
-      <form >
-        <input type="text" id="fname" name="firstname" placeholder="Yourname" style="border-radius:8px;width:100%; height:7%;margin-bottom:3%;"><br>
-        <input type="text" id="Email" name="Email" placeholder="YourEmail" style="border-radius:8px;width:100%; height:7%;margin-bottom:3%;"><br>
-        <textarea rows="10" cols="40" placeholder="Yourmessage" style="border-radius:8px;width:100%; height:20%;margin-bottom:3%; "> </textarea>
-        <button class="button" >Submit</button>
-      </div>
+        <div class="box">
+          <input type="submit" value="Submit">
+        </div>
+       
       </form>
+    </div>
+
 </div>
 
-  </div>
+  
+<div class="container-small">
+  <h2>Contact form</h2>
+  <p> address1</p>
+  <hr >
+  <p> address01</p>
+  <hr>
+  <p> address001</p>
 </div>
-<div id="map"></div>
-<script>
-  function initMap() {
-    var uluru = {lat:13.727587, lng: 100.772396};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: uluru
-    });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-    });
-  }
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWEvXadpYhLZBdk3kWDzZLYI8WZ31uNjM&callback=initMap">
-</script>
-</div>
-<footer id="footer">
-<a href="#top"><img src="/static/arrow.png" style="margin-left:5px;margin-top:8px;"></a>
-</footer>
 
 </body>
 </html>
