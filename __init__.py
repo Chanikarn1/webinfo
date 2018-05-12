@@ -27,9 +27,10 @@ def food():
 def join():
     return render_template("web/join.html")
 
-@app.route("/khaokho.html")
-def khaokho():
-    return render_template("web/khaokho.html") 
+
+@app.route("/layout.html")
+def layout():
+    return render_template("layout.html") 
 
 @app.route("/kohchang.html")
 def kohchang():
@@ -61,5 +62,16 @@ def test2():
 @app.route("/travel.html")
 def travel():
     return render_template("web/travel.html")  
+
+
+@app.route("/nav.html")
+def test4():
+    return render_template("nav.html")
+
+@app.route("/index.html")
+def navbar():
+    return render_template("index.html")
+
+
 if __name__ == "__main__":
     app.run()

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+  </head>
+  <body>
+    <!-- <div id="content">{% block content %}{% endblock %}</div> -->
+    <div id="header">
+      {% block header %}
+      <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+      
+      {% endblock %}
+    </div>
+  </body>
+</html>
