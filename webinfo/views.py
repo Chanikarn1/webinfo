@@ -118,4 +118,10 @@ def register():
                     error = "Username or Password already exists."
                     flash('Something Wrong!', 'error')
     return render_template("register.html", error=error)
+
+@app.route('/logout')
+def logout():
+    session['username'] = ''
+    flash('You were logged out')
+    return redirect(url_for('index'))
     
