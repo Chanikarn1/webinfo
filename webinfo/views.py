@@ -1,5 +1,7 @@
 from webinfo import app
-from flask import render_template
+from flask import render_template, flash, redirect, session, request
+from .models import User
+import os
 
 @app.route("/")
 @app.route("/index.html")
@@ -67,6 +69,17 @@ def travel():
 def test4():
     return render_template("nav.html")
 
-@app.route("/index.html")
-def navbar():
-    return render_template("index.html")
+app.secret_key = os.urandom(12)
+@app.route("/login.html", methods=["GET", "POST"])
+def login():
+    users = User.query.all()
+    for user in users:
+        if request.form['password'] == user.password and request.form['username'] == user.username:
+            session['logged_in'] = True
+        else:
+            flash('wrong password!')
+    return index()
+
+@app.route('/dashboard.html')
+def dashboard():
+    return render_template('dashboard.html')
