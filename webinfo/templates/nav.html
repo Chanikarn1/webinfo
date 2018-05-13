@@ -28,7 +28,7 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="#aboudft">About</a></li>
             {% if username %}
-            <li><a href="{{ url_for('logout') }}" onclick="Confirm">Log out</a></li>
+            <li><a href="{{ url_for('logout') }}" onclick="return Confirm()">Log out</a></li>
             <p>Hello!, {{ username }}</p>
             {% else %}
             <div class="dropdown">
@@ -55,7 +55,9 @@
       <div id="content">{% block content %}{% endblock %}</div>
       <script>
         function Confirm(){
-          confirm("Are you sure?");
+          if (!confirm("Are you sure?")){
+            return false
+          }
         }
       </script>
 </body>
