@@ -14,8 +14,8 @@
             {% if error %}
               <p style="color:red; font-size:smaller">{{ error }}</p>
             {% endif %}
-            <input type="username" name="username" placeholder="Username"/>
-            <input type="password" name="password" placeholder="Password"/>
+            <input type="username" name="username" placeholder="Username" value="{{ username }}"/>
+            <input type="password" name="password" placeholder="Password" value="{{ password }}"/>
             <button>login</button>
             <p class="message">Not registered? <a href="register.html">Create an account</a></p>
           </form>

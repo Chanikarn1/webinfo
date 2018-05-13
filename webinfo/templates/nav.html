@@ -17,6 +17,10 @@
           <li><a href="#news">Event</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#aboudft">About</a></li>
+          {% if username %}
+            <li><a href="#">Log out</a></li>
+            <p> Hello! {{ username }}</p>
+          {% else %}
           <div class="dropdown">
             <li>
               <button class="dropbtn"><img src="../static/img/avatar.png" style="width: 50%;" >  
@@ -30,7 +34,8 @@
             <!-- <li>
               <a href="#login"></a>
             </li> -->
-            </div>
+          </div>
+          {% endif %}
       </ul></div>
       
       {% endblock %}
