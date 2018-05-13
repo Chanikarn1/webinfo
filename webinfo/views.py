@@ -7,7 +7,7 @@ import os
 @app.route("/index.html")
 
 def index():
-    return render_template("web/index.html")
+    return render_template("index.html")
 
 @app.route("/about_us.html")
 def about_us():
