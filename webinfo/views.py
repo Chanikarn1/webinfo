@@ -1,11 +1,10 @@
 from webinfo import app
-from flask import render_template, flash, redirect, session, request
-from .models import User
+from flask import render_template, flash, redirect, session, request, url_for
+from .models import User, db
 import os
 
 @app.route("/")
 @app.route("/index.html")
-
 def index():
     return render_template("index.html")
 
@@ -64,7 +63,6 @@ def test2():
 def travel():
     return render_template("web/travel.html")  
 
-
 @app.route("/nav.html")
 def test4():
     return render_template("nav.html")
@@ -72,14 +70,41 @@ def test4():
 app.secret_key = os.urandom(12)
 @app.route("/login.html", methods=["GET", "POST"])
 def login():
-    users = User.query.all()
-    for user in users:
-        if request.form['password'] == user.password and request.form['username'] == user.username:
-            session['logged_in'] = True
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] == '' and request.form['password'] == '':
+            error = 'Please enter your username and password.'
+        elif request.form['username'] == '':
+            error = 'Please enter your username'
+        elif request.form['password'] == '':
+            error = 'Please enter your password'
         else:
-            flash('wrong password!')
-    return index()
+            users = User.query.all()
+            for user in users:
+                if request.form['password'] == user.password and request.form['username'] == user.username:
+                    flash('Login successfully.', 'success')
+                    return redirect(url_for('.index'))
+                else:
+                    error = 'Invalid username or password. Please try again.'
+    return render_template('login.html', error=error)
 
-@app.route('/dashboard.html')
-def dashboard():
-    return render_template('dashboard.html')
+@app.route("/register.html", methods=["GET", "POST"])
+def register():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] == '' or request.form['password'] == '':
+            error = 'Please enter your username or password'
+        else:
+            if error == None:
+                try:
+                    new_user = User(username=request.form['username'],password=request.form['password'])
+                    db.session.add(new_user)
+                    db.session.commit()
+                    flash('Register successfully.', 'success')
+                    return redirect(url_for('.index'))
+                except Exception as e:
+                    db.session.rollback()
+                    error = "Username or Password already exists."
+                    flash('Something Wrong!', 'error')
+    return render_template("register.html", error=error)
+    
