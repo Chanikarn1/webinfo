@@ -25,4 +25,14 @@ class User(db.Model):
 
     def __repr__(self):
         return "<Username: {}>".format(self.username)
+
+class Contact(db.Model):
+    name = db.Column(db.String(80), nullable=False, primary_key=True)
+    email = db.Column(db.String(80), nullable=False, primary_key=True)
+    message = db.Column(db.String(80), nullable=False, primary_key=True)
+
+    def __init__(self, name, email, message):
+        self.name = name
+        self.email = email
+        self.message = message
     

@@ -1,6 +1,6 @@
 from webinfo import app
 from flask import render_template, flash, redirect, session, request, url_for
-from .models import User, db
+from .models import User, db, Contact
 import os
 
 @app.route("/")
@@ -13,9 +13,27 @@ def index():
 def about_us():
     return render_template("web/about_us.html")
 
-@app.route("/contact.html")
+@app.route("/contact.html", methods=("GET", "POST"))
 def contact():
-    return render_template("/contact.html")
+    error = ""
+    if request.method == "POST":
+        name = request.form["name"]
+        email = request.form["email"]
+        message = request.form["message"]
+        if name == "" or email == "" or message == "":
+            error = "Please fill empty field."
+        else:
+            try:
+                contact = Contact(name=name, email=email, message=message)
+                db.session.add(contact)
+                db.session.commit()
+                flash("We got your message!!.", "success")
+            except:
+                db.session.rollback()
+                error = "somthing wrong!!"
+                flash('Something Wrong!', 'error')
+
+    return render_template("/contact.html", error=error)
 
 @app.route("/event.html")
 def event():
