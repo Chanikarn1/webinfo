@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>CONTACT ME</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;height: 100%;width: 100%}
@@ -48,36 +49,44 @@ input[type=submit]:hover {
 }
 .box-input{
 
-  margin-right:10%;
+    margin-right:10%;
   
 }
 .box{
-  width:70%;
-  color: white;
-  
+    width:70%;
+    color: white;
+    font-size: 18px;
 }
 .container-small{
     width:30%;
     height:50%;
     border-radius: 5px;
-    background-color:#FA8072;
+    background-color:white;
     padding-right: 1%;
     padding-left: 1%;
     padding-bottom: 2.5%;
     padding-top: 1%;
     margin-right: 10%; 
     margin-left: 50%;
-    margin-top: -25%;
+    margin-top: -30%;
+    box-shadow: 3px 3px 5px #888888;
     
-
 }
 #map {
         
-        margin-top:10%;
-        height: 400px;
-        width: 100%;
-       }
+    margin-top:10%;
+    height: 400px;
+    width: 100%;
+       
+}
 
+.footer {
+    background-color: #FF9999;
+    padding: 10px;
+    margin-bottom: 0px;
+
+
+}
 
 </style>
 </head>
@@ -102,7 +111,6 @@ input[type=submit]:hover {
         </div>
 
         <div class="box">
-          <input type="text" id="lname" name="lastname" placeholder=Email>
           <textarea id="subject" name="subject" placeholder=Message style="height:200px"></textarea>
         </div>
 
@@ -118,11 +126,15 @@ input[type=submit]:hover {
   
 <div class="container-small">
   <h2>Contact form</h2>
-    <p> address1</p>
-    <hr >
-    <p> address01</p>
+    <p><img style="width: 7%" src="../static/img/phone.png"> 088-8343220 </p>
     <hr>
-   <p> address001</p>
+    <p><img src="../static/img/facebook.png"  > Chanikan Rujimetineekul </p>
+    <hr >
+    <p><img src="../static/img/envelope.png"> 57010248@kmitl.ac.th</p>
+    <hr>
+    <p><img src="../static/img/placeholder.png">King Mongkut's Institute of 
+      Technology Ladkrabang.
+      Chalongkrung Rd. Ladkrabang</p>
 </div>
 
 
@@ -144,14 +156,16 @@ input[type=submit]:hover {
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3_hf_c_rNvzyl8AYvQY13sEntAiL0UBw &callback=initMap">
 </script>
 
+<div class="footer" >
+    <div style="margin-left:85%">
+      <img src="../static/img/facebook-logo-button.png"  >
+      <img src="../static/img/instagram-logo.png" >
+      <img src="../static/img/twitter-logo-button.png" >
+      <img src="../static/img/google-plus-logo-button.png" >
+    </div>
+</div>
 
 
-  <footer>
-    <p>Posted by: Hege Refsnes</p>
-    <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
-  </footer>
-  
-  <p><strong>Note:</strong> The footer tag is not supported in Internet Explorer 8 and earlier versions.</p>
 
 
 </body>
