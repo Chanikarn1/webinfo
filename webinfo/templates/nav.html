@@ -18,19 +18,24 @@
 <body>
     <div id="header">
         {% block header %}
-        <div class="navbar" ><ul>
+        <div class="navbar" id="navbar"><ul>
           <div class="logo" >
             <li><a class="index" href="index.html"><img src="../static/img/logoOn.png" style="width: 20%;" ></a></li>
           </div>
           <div class="navbar-content">
-            <li><a class="active" href="#home">Review</a></li>
+            <div class="firstsection">
+            <li><a class="#active" href="#home">Review</a></li>
             <li><a href="#news">Event</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#aboudft">About</a></li>
             {% if username %}
             <li><a href="{{ url_for('logout') }}" onclick="return Confirm()">Log out</a></li>
             <p>Hello!, {{ username }}</p>
+            </div>
+                         
             {% else %}
+            
+            
             <div class="dropdown">
               <li>
                 <button class="dropbtn"><img src="../static/img/avatar.png" style="width: 50%;" >  
@@ -49,11 +54,29 @@
           </div>
         </ul>
       </div>
-        
+      
         {% endblock %}
       </div>
       <div id="content">{% block content %}{% endblock %}</div>
+      
       <script>
+        // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
         function Confirm(){
           if (!confirm("Are you sure?")){
             return false
