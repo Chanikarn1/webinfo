@@ -1,85 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>CONTACT ME</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;height: 100%;width: 100%}
-
-input[type=text], select, textarea {
-   
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-input[type=submit] {
-    width:100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-.container-contact{
-    border-radius: 5px;
-    background-color:#00CED1;
-    padding-right: 5%;
-    padding-left: 5%;
-    padding-bottom: 2.5%;
-    padding-top: 1%;
-    margin-right: 40%;
-    margin-left: 10%;
-}
-.box-input{
-
-  margin-right:10%;
-  
-}
-.box{
-  width:70%;
-  color: white;
-  
-}
-.container-small{
-    width:30%;
-    height:50%;
-    border-radius: 5px;
-    background-color:#FA8072;
-    padding-right: 1%;
-    padding-left: 1%;
-    padding-bottom: 2.5%;
-    padding-top: 1%;
-    margin-right: 10%; 
-    margin-left: 50%;
-    margin-top: -25%;
-    
-
-}
-#map {
-        
-        margin-top:10%;
-        height: 400px;
-        width: 100%;
-       }
-
-
-</style>
+<link rel="stylesheet" type="text/css" href="../static/css/contact.css">
 </head>
 <body>
 
@@ -87,23 +11,31 @@ input[type=submit]:hover {
 
 <div class="container-contact">
     <div class="box-input">
-      <form action="/action_page.php">
-      
+      <form method="POST">
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <p style="color:green; font-size:smaller; font-weight: bold;">{{ message }}</p>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% if error %}
+            <p style="color:red; font-size:smaller; font-weight: bold;">{{ error }}</p>
+          {% endif %}
         <div class="box">
           <label for="fname"><h2>Send Us your Feedback</h2></label>
         </div>
 
         <div class="box">
-          <input type="text" id="fname" name="firstname" placeholder=Name>
+          <input type="text" id="fname" name="name" placeholder=Name>
         </div>
 
         <div class="box">
-          <input type="text" id="lname" name="lastname" placeholder=Email>
+          <input type="text" id="lname" name="email" placeholder=Email>
         </div>
 
         <div class="box">
-          <input type="text" id="lname" name="lastname" placeholder=Email>
-          <textarea id="subject" name="subject" placeholder=Message style="height:200px"></textarea>
+          <textarea id="subject" name="message" placeholder=Message style="height:200px"></textarea>
         </div>
 
         <div class="box">
@@ -118,11 +50,15 @@ input[type=submit]:hover {
   
 <div class="container-small">
   <h2>Contact form</h2>
-    <p> address1</p>
-    <hr >
-    <p> address01</p>
+    <p><img style="width: 7%" src="../static/img/phone.png"> 088-8343220 </p>
     <hr>
-   <p> address001</p>
+    <p><img src="../static/img/facebook.png"  > Chanikan Rujimetineekul </p>
+    <hr >
+    <p><img src="../static/img/envelope.png"> 57010248@kmitl.ac.th</p>
+    <hr>
+    <p><img src="../static/img/placeholder.png">King Mongkut's Institute of 
+      Technology Ladkrabang.
+      Chalongkrung Rd. Ladkrabang</p>
 </div>
 
 
@@ -144,14 +80,16 @@ input[type=submit]:hover {
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3_hf_c_rNvzyl8AYvQY13sEntAiL0UBw &callback=initMap">
 </script>
 
+<div class="footer" >
+    <div style="margin-left:85%">
+      <img src="../static/img/facebook-logo-button.png"  >
+      <img src="../static/img/instagram-logo.png" >
+      <img src="../static/img/twitter-logo-button.png" >
+      <img src="../static/img/google-plus-logo-button.png" >
+    </div>
+</div>
 
 
-  <footer>
-    <p>Posted by: Hege Refsnes</p>
-    <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
-  </footer>
-  
-  <p><strong>Note:</strong> The footer tag is not supported in Internet Explorer 8 and earlier versions.</p>
 
 
 </body>
