@@ -15,7 +15,7 @@ def about_us():
 
 @app.route("/contact.html")
 def contact():
-    return render_template("web/contact.html")
+    return render_template("/contact.html")
 
 @app.route("/event.html")
 def event():
@@ -67,6 +67,11 @@ def travel():
 @app.route("/nav.html")
 def test4():
     return render_template("nav.html")
+
+@app.route("/blog1.html")
+def blog1():
+    return render_template("blog1.html")
+
 
 app.secret_key = os.urandom(12)
 @app.route("/login.html", methods=["GET","POST"])
