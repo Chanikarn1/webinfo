@@ -23,7 +23,12 @@ def event():
 
 @app.route("/food.html")
 def food():
-    return render_template("web/food.html")  
+    return render_template("web/food.html") 
+
+@app.route("/blog2.html")
+def blog2():
+    return render_template("/blog2.html")
+
 @app.route("/join.html")
 def join():
     return render_template("web/join.html")
