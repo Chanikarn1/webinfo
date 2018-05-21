@@ -51,6 +51,14 @@ def blog3():
 def blog6():
     return render_template("/blog6.html")
 
+@app.route("/review1.html")
+def review1():
+    return render_template("/review1.html")
+
+@app.route("/review2.html")
+def review2():
+    return render_template("/review2.html")
+
 
 @app.route("/food.html")
 def food():
@@ -59,6 +67,14 @@ def food():
 @app.route("/blog2.html")
 def blog2():
     return render_template("/blog2.html")
+
+@app.route("/blog4.html")
+def blog4():
+    return render_template("/blog4.html")
+
+@app.route("/blog5.html")
+def blog5():
+    return render_template("/blog5.html")
 
 @app.route("/join.html")
 def join():
