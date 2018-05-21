@@ -13,8 +13,11 @@ def index():
 def about_us():
     return render_template("web/about_us.html")
     
-@app.route("/user_Review.html")
+@app.route("/user_Review.html", methods=("GET", "POST"))
 def user_review():
+    error = ""
+    if request.method == "POST":
+        message = request.form["message"]
     return render_template("user_Review.html")
 
 @app.route("/contact.html", methods=("GET", "POST"))

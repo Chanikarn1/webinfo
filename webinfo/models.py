@@ -37,8 +37,8 @@ class Contact(db.Model):
         self.message = message
 
 class clientreview(db.Model):
-    godate= db.Column(db.String(80), nullable=False, primary_key=True)
+    # godate= db.Column(db.String(80), nullable=False, primary_key=True)
     message = db.Column(db.String(100000), nullable=False, primary_key=True)
-    def __init__(self, name, password):
-        self.username = username
-        self.password = password
+    def __init__(self, message):
+        # self.username = godate
+        self.message = message
