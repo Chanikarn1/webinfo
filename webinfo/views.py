@@ -38,6 +38,15 @@ def contact():
 @app.route("/event.html")
 def event():
     return render_template("web/event.html")
+    
+@app.route("/blog3.html")
+def blog3():
+    return render_template("/blog3.html")
+
+@app.route("/blog6.html")
+def blog6():
+    return render_template("/blog6.html")
+
 
 @app.route("/food.html")
 def food():
