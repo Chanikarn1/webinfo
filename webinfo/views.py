@@ -12,6 +12,10 @@ def index():
 @app.route("/about_us.html")
 def about_us():
     return render_template("web/about_us.html")
+    
+@app.route("/user_Review.html")
+def user_review():
+    return render_template("user_Review.html")
 
 @app.route("/contact.html", methods=("GET", "POST"))
 def contact():

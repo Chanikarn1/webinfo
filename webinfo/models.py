@@ -35,4 +35,10 @@ class Contact(db.Model):
         self.name = name
         self.email = email
         self.message = message
-    
+
+class clientreview(db.Model):
+    godate= db.Column(db.String(80), nullable=False, primary_key=True)
+    message = db.Column(db.String(100000), nullable=False, primary_key=True)
+    def __init__(self, name, password):
+        self.username = username
+        self.password = password
