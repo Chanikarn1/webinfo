@@ -47,6 +47,14 @@ def blog3():
 def blog6():
     return render_template("/blog6.html")
 
+@app.route("/review1.html")
+def review1():
+    return render_template("/review1.html")
+
+@app.route("/review2.html")
+def review2():
+    return render_template("/review2.html")
+
 
 @app.route("/food.html")
 def food():
