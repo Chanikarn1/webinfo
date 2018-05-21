@@ -64,6 +64,14 @@ def food():
 def blog2():
     return render_template("/blog2.html")
 
+@app.route("/blog4.html")
+def blog4():
+    return render_template("/blog4.html")
+
+@app.route("/blog5.html")
+def blog5():
+    return render_template("/blog5.html")
+
 @app.route("/join.html")
 def join():
     return render_template("web/join.html")
