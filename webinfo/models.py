@@ -36,9 +36,19 @@ class Contact(db.Model):
         self.email = email
         self.message = message
 
-class clientreview(db.Model):
-    # godate= db.Column(db.String(80), nullable=False, primary_key=True)
+class ReviewByUser(db.Model):
+    go_date= db.Column(db.String(10), nullable=False, primary_key=False)
+    back_date= db.Column(db.String(10), nullable=False, primary_key=False)
     message = db.Column(db.String(100000), nullable=False, primary_key=True)
-    def __init__(self, message):
+    money = db.Column(db.String(10), nullable=False, primary_key=False)
+    NameTrip = db.Column(db.String(255), nullable=False, primary_key=True)
+    ImageName = db.Column(db.String(255), nullable=True, primary_key=False)
+    def __init__(self, message,go_date,back_date,money,NameTrip,ImageName):
         # self.username = godate
-        self.message = message
+        self.message = message  
+        self.go_date = go_date #ด้านหน้า global ด้านหลัง local
+        self.back_date = back_date
+        self.money = money
+        self.NameTrip = NameTrip
+        self.ImageName = ImageName
+        

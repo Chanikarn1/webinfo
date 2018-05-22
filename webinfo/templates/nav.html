@@ -26,7 +26,12 @@
             <div class="firstsection">
             <li><a class="#active" href="#home">Review</a></li>
             <li><a href="#news">Event</a></li>
-            <li><a href="#contact">Contact</a></li>
+            {% if username %}
+            <li><a href="{{ url_for('user_review') }}" >UserReview</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}" onclick="return Confirmlogin()" >UserReview</a></li>
+            {% endif %}
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="#aboudft">About</a></li>
             {% if username %}
             <li><a href="{{ url_for('logout') }}" onclick="return Confirm()">Log out</a></li>
@@ -79,6 +84,11 @@ function myFunction() {
 }
         function Confirm(){
           if (!confirm("Are you sure?")){
+            return false
+          }
+        }
+        function Confirmlogin(){
+          if (!confirm("Please Login")){
             return false
           }
         }

@@ -2,7 +2,7 @@
 {% block title %}Index{% endblock %}
 {% block head %}
   {{ super() }}
-
+  
 {% endblock %}
 
 
@@ -10,11 +10,40 @@
 <h1>
 เพิ่มทริป
 </h1>
-<form method="POST">
+<!-- <form method="POST"> -->
     <!-- <input type="file" name="pic" accept="image/*">
     
     <input type="text"> -->
-    <textarea name="message"></textarea>
-    <input type="submit" value="send" >
-</form>
+    
+    <form action="{{  url_for('.user_review') }}" method="POST" enctype="multipart/form-data" >
+    {{test}}
+    {% if error %}
+    {{error}}
+    {% endif %}
+   
+     <textarea name="msg"></textarea>
+
+          Enter a date before 1980-01-01:<br>
+      <input type="text" name="goday" >วันที่ไป<br><br>
+      <input type="text" name="backday" >วันที่กลับ<br><br>
+      <input type="text" name="money" >เงิน<br><br>
+      <input type="text" name="NameTrip" >ชื่อทริป<br><br>
+      
+      <input type="file" name="file" accept="image/*">
+
+      <input type="submit" value="send" >
+    </form>
+
+   <!-- <script>
+    function Confirm(){
+      if (!confirm("Are you sure?")){
+        return false
+      }
+    }
+  </script> -->
+
+  <!-- <input type="file" name="file" accept="image/*">
+
+<input type="submit" value="send" > -->
+<!-- </form> -->
 {% endblock %}
