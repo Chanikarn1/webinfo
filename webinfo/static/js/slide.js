@@ -47,3 +47,13 @@ function carousel() {
     slides[slideIndex-1].style.display = "block";
     setTimeout(carousel,8000); // Change image every 2 seconds
 } 
+
+function myFunction(x) {
+    x.classList.toggle("fa-thumbs-down");
+}
+
+
+
+
+
+

@@ -25,7 +25,13 @@ li a {
     font-size: 20px;
     font-family: 'Ropa Sans', sans-serif;
     text-decoration: none;
+    
 }
+
+p{
+    font-family: 'Kanit', sans-serif;
+}
+
 
  li a:hover {
     text-decoration: underline;

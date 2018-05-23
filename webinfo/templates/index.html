@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+ 
+
   <style type="text/css">
         * {box-sizing:border-box}
 
@@ -86,7 +89,7 @@ margin-top: 28%;
 
 @-webkit-keyframes fade {
   from {opacity: .4}
-  to {opacity: 1}
+  to {opacity: 1} 
 }
 
 @keyframes fade {
@@ -94,9 +97,38 @@ margin-top: 28%;
   to {opacity: 1}
 }
 
+div.gallery {
+    margin: 30px;
+    margin-left: 7%;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+}
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+p{
+    font-family: 'Kanit', sans-serif;
+}
+
+ 
+
   </style>
 {% endblock %}
 {% block content %}
+
+
 
 <div class="slideshow-container">
 
@@ -119,6 +151,7 @@ margin-top: 28%;
   </div>
 
   
+
 </div>
 <!-- Next and previous buttons -->
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -130,7 +163,7 @@ margin-top: 28%;
         <form>
             <input type="text" name="search" placeholder="Search..">
           </form>
-    </div>      
+</div>      
 <!-- The dots/circles -->
 <div class="dots" style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span>
@@ -139,8 +172,57 @@ margin-top: 28%;
 </div>
 <script src="../static/js/slide.js"></script> 
 
-<div class="box-content">
   
+<div class="box-content">
+
+    <div class="gallery">
+        <a target="_blank" href="../static/img/summer/1.jpg">
+          <img src="../static/img/summer/1.jpg" alt="Fjords" width="300" height="200">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+      <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+      <div class="gallery">
+        <a target="_blank" href="../static/img/summer/1.jpg">
+          <img src="../static/img/summer/1.jpg" alt="Forest" width="300" height="200">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="../static/img/summer/1.jpg">
+          <img src="../static/img/summer/1.jpg" alt="Northern Lights" width="300" height="200">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="../static/img/summer/1.jpg">
+          <img src="../static/img/summer/1.jpg" alt="Mountains" width="300" height="200">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+      
+      <div class="gallery">
+          <a target="_blank" href="../static/img/summer/1.jpg">
+            <img src="../static/img/summer/1.jpg" alt="Mountains" width="300" height="200">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+      </div>
+      <div class="gallery">
+          <a target="_blank" href="../static/img/summer/1.jpg">
+            <img src="../static/img/summer/1.jpg" alt="Mountains" width="300" height="200">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+      </div>
+
+ 
+
+
 
 </div>
+
+
+
+
 {% endblock %}
