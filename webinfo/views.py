@@ -40,12 +40,12 @@ def upload():
 
     return render_template("user_Review.html")
 
-    
+   
 @app.route("/user_Review.html", methods=("GET", "POST"))
 def user_review():
-    
+      
     username = session.get('username', '')
-    # session['username'] = username
+    session['username'] = username
     error = ""
     test = ""
     if not username:
@@ -84,8 +84,9 @@ def user_review():
                         print(destination)
                         
                         file.save(destination)
-                        
-                    return redirect(url_for('.login'))
+                     
+        
+                    return redirect(url_for('.detail',nametrip=NameTrip,username=username))
                 except:
                     db.session.rollback()
                     error = "Something Wrong!"
@@ -219,6 +220,7 @@ def login():
                     flash('Login successfully.', 'success')
                     if username:
                         session['username'] = username
+                        
                     else:
                         session['username'] = request.form['username']
                     return redirect(url_for('.index'))
@@ -250,6 +252,22 @@ def register():
                     flash('Something Wrong!', 'error')
     return render_template("register.html", error=error)
 
+@app.route("/detail/<nametrip>")
+
+def detail(nametrip):
+    
+    username = session.get('username', '')
+    session['username'] = username
+    trip = ReviewByUser.query.filter_by(NameTrip=nametrip).first() #nametrip คือค่าที่ส่งมาจากอีกหน้า 
+    tripname = trip.NameTrip                                        #NameTrip คือ Attribute ของตาราง ชื่อ ReviewByUser
+    back_date = trip.back_date                                                      #nametrip เป็นชื่อตัวแปรที่เก็บค่าของอ็อบเจคที่ดึงดาต้าเบสขึ้นมา
+    go_date = trip.go_date 
+    message = trip.message
+    money = trip.money      
+                     
+    return render_template("detail.html", username=username ,topic=tripname,
+    godate=go_date,backdate=back_date,detail=message,money=money) #ด้านหน้าคือค่าที่จะส่งไปอีกหน้า และด้านหลังคือค่าของหน้าเรา
+    
 @app.route('/logout')
 def logout():
     session['username'] = ''

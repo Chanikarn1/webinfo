@@ -1,0 +1,19 @@
+{% extends "nav.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  
+{% endblock %}
+
+
+{% block content %}
+<h1>{{topic}}</h1>
+<div>
+    <p>{{godate}} ถึง {{backdate}}     เงิน:{{money}}</p>
+    
+    <p>{{detail}}<p>
+
+
+</div>
+
+{% endblock %}

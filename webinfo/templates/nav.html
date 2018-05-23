@@ -28,18 +28,22 @@
             <li><a href="#news">Event</a></li>
             {% if username %}
             <li><a href="{{ url_for('user_review') }}" >UserReview</a></li>
-            {% else %}
-            <li><a href="{{ url_for('login') }}" onclick="return Confirmlogin()" >UserReview</a></li>
-            {% endif %}
+            
+            <!-- {% else %}
+            <li><a href="{{ url_for('login') }}" onclick="return Confirmlogin()" >UserReview</a></li> -->
+            <!-- {% endif %} -->
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#aboudft">About</a></li>
-            {% if username %}
+            <!-- {% if username %} -->
+            
             <li><a href="{{ url_for('logout') }}" onclick="return Confirm()">Log out</a></li>
             <p>Hello!, {{ username }}</p>
             </div>
                          
             {% else %}
-            
+            <li><a href="{{ url_for('login') }}" onclick="return Confirmlogin()" >UserReview</a></li> -->
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#aboudft">About</a></li>
             
             <div class="dropdown">
               <li>
