@@ -1,97 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="../static/css/slide.css">
 <style>
-    body,
-#slider,
-.wrap,
-.slide-content {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-}
 
-.wrap {
-  position: relative;
-}
 
-.slide {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.slide1 {
-  background-image: url("https://static.pexels.com/photos/302889/pexels-photo-302889.jpeg");
-}
-.slide2 {
-  background-image: url("https://static.pexels.com/photos/302892/pexels-photo-302892.jpeg");
-}
-.slide3 {
-  background-image: url("https://static.pexels.com/photos/226633/pexels-photo-226633.jpeg");
-}
-
-.slide-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.slide-content span {
-  font-size: 5rem;
-  color: #fff;
-}
-
-.arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  margin-top: -35px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-#arrow-left {
-  border-width: 30px 40px 30px 0;
-  border-color: transparent #fff transparent transparent;
-  left: 0;
-  margin-left: 30px;
-}
-
-#arrow-right {
-  border-width: 30px 0 30px 40px;
-  border-color: transparent transparent transparent #fff;
-  right: 0;
-  margin-right: 30px;
-}
-</style>
+  </style>
 <body>
-<div class="wrap">
-        <div id="arrow-left" class="arrow"></div>
-        <div id="slider">
-          <div class="slide slide1">
-            <div class="slide-content">
-              <span>Image One</span>
-            </div>
-          </div>
-          <div class="slide slide2">
-            <div class="slide-content">
-              <span>Image Two</span>
-            </div>
-          </div>
-          <div class="slide slide3">
-            <div class="slide-content">
-              <span>Image Three</span>
-            </div>
-          </div>
-        </div>
-        <div id="arrow-right" class="arrow"></div>
+    <div class="w3-content w3-display-container">
+        <a href="blog5.html"><img class="mySlides" src="../static/img/blog3/1.jpg" style="width:30%"></a>
+        <img class="mySlides" src="../static/img/blog3/2.jpg" style="width:30%">
+        <img class="mySlides" src="../static/img/blog3/3.jpg" style="width:30%">
+        <img class="mySlides" src="../static/img/blog3/4.jpg" style="width:30%">
+        <img class="mySlides2" src="../static/img/blog3/5.jpg" style="width:30%">
+        <img class="mySlides2" src="../static/img/blog3/6.jpg" style="width:30%">
+        <img class="mySlides2" src="../static/img/blog3/7.jpg" style="width:30%">
+        <img class="mySlides2" src="../static/img/blog3/8.jpg" style="width:30%">
+        <img class="mySlides3" src="../static/img/blog3/9.jpg" style="width:30%">
+        <img class="mySlides3" src="../static/img/blog3/10.jpg" style="width:30%">
+        <img class="mySlides3" src="../static/img/blog3/11.jpg" style="width:30%">
+        <img class="mySlides3" src="../static/img/blog3/12.jpg" style="width:30%">
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
       </div>
+      
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var y = document.getElementsByClassName("mySlides2");
+        var x = document.getElementsByClassName("mySlides");
+        var z = document.getElementsByClassName("mySlides3");
+        if (n > x.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+           
+           x[i].style.display = "none"; 
+           y[i].style.display = "none"; 
+           z[i].style.display = "none"; 
+        }
+        x[slideIndex-1].style.display = "inline";
+        y[slideIndex-1].style.display = "inline"; 
+        z[slideIndex-1].style.display = "inline"; 
+      }
+      </script>
+    
+
 </body>
-</html> 
+</html>

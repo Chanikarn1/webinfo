@@ -44,3 +44,10 @@ input[type=text] {
 color: white;
 }
 
+.fa{
+    font-size: 100px;
+    cursor: pointer;
+    margin-left:50%;
+    margin-top:15%;
+    color:gray;
+}
