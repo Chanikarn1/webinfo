@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../static/css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<<<<<<< HEAD
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" type="text/css" href="../static/css/slide.css">
   <style type="text/css">
@@ -124,44 +125,46 @@ p{
 }
 
   </style>
+=======
+>>>>>>> 8913c187ca4d27fd19722ca2e0feffb3f39a1436
 {% endblock %}
 {% block content %}
 
 
 
 <div class="slideshow-container">
-
   <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-   
-    <img src="../static/img/slide1.jpg" style="width:100%">
-    
+  <div class="slide-image">
+    <div class="mySlides fade">
+      <img src="../static/img/slide1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="../static/img/slide2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="../static/img/slide3.jpg" style="width:100%">
+    </div>
   </div>
-
-  <div class="mySlides fade">
-    <img src="../static/img/slide2.jpg" style="width:100%">
-    
-  </div>
-
-  <div class="mySlides fade">
-    
-    <img src="../static/img/slide3.jpg" style="width:100%">
-    
-  </div>
-
   
 
 </div>
-<!-- Next and previous buttons -->
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
 <div class="search">
+<<<<<<< HEAD
     <center>
     <h1>อยากไปเที่ยวไหน ?</h1><center>
         <form>
             <input type="text" name="search" placeholder="Search..">
           </form>
+=======
+  <center>
+    <h1>อยากไปเที่ยวไหน ?</h1>
+  <center>
+  <form>
+    <input type="text" name="search" placeholder="Search..">
+  </form>
+>>>>>>> 8913c187ca4d27fd19722ca2e0feffb3f39a1436
 </div>      
 <!-- The dots/circles -->
 <div class="dots" style="text-align:center">
@@ -169,6 +172,7 @@ p{
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
+<!-- Next and previous buttons -->
 <script src="../static/js/slide.js"></script> 
 <script src="../static/js/index.js"></script>
 
