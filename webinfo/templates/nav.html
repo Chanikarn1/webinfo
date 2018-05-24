@@ -57,6 +57,7 @@
       
         {% endblock %}
       </div>
+      <button onclick="topFunction()" id="myButtontop" title="Go to top">Top</button>
       <div id="content">{% block content %}{% endblock %}</div>
       
       <script>
@@ -82,6 +83,24 @@ function myFunction() {
             return false
           }
         }
+
+
+// from top button
+  window.onscroll = function() {scrollbtn()};
+  function scrollbtn() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myButtontop").style.display = "block";
+      } else {
+          document.getElementById("myButtontop").style.display = "none";
+      }
+  }
+
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      document.getElementById("myButtontop").style.display = "none"; 
+  }
+
       </script>
 </body>
 </html>

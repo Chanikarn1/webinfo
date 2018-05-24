@@ -17,7 +17,7 @@
 <body>
 
 
-<div id=top></div>
+<div ></div>
 <div class="container-contact">
     <div class="box-input">
       <form method="POST">
@@ -95,38 +95,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3_hf_c_rNvzyl8AYvQY13sEn
 <!-- footer tag-->
 <div class="footer">
 
-  <!-- Back-to-top Button-->
-  <a href="#top" class="cd-top"><img src="../static/img/icons8-slide-up-100.png" style="width:50px;height:50px;margin-right:5%;" align="Right" ></a>
-  <script>
-      jQuery(document).ready(function($){
-     
-      var offset = 300,
-       
-          offset_opacity = 1200,
-         
-          scroll_top_duration = 700,
-      
-          $back_to_top = $('.cd-top');
-  
-     
-      $(window).scroll(function(){
-          ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-          if( $(this).scrollTop() > offset_opacity ) {
-              $back_to_top.addClass('cd-fade-out');
-          }
-      });
-  
-      //smooth scroll to top
-      $back_to_top.on('click', function(event){
-          event.preventDefault();
-          $('body,html').animate({
-              scrollTop: 0 ,
-               }, scroll_top_duration
-          );
-      });
-  
-  });
-  </script><!-- End Back-to-top Button-->
+
   
   
   </div><!--end footer tag-->
