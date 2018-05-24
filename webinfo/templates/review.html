@@ -1,0 +1,235 @@
+{% extends "nav.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="topbutton.css"> <!-- ปุ่มลูกศรขึ้นบนเพจ-->
+
+  <style>
+  #mainpic{
+
+  width: 60%;
+  height: auto;
+  margin-top: 5%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  img{
+  width: 70%;
+  height: auto;
+  }
+  
+  #pinpic {
+    width: 9%;
+  height: auto;
+  }
+    
+  .mar {
+  /*  background-color: rgba(233, 123, 165, 0.24);*/
+  margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+p,h1,h3,h4 {
+    font-family: 'Kanit', sans-serif;
+}
+
+ .rightcolumn {   
+    float: left;
+    width: 55%;
+     padding-left: 20px;
+}
+
+/* Right column */
+.leftcolumn  {
+    float: left;
+    width: 30%;
+    margin-right: 3%;
+    margin-bottom: 40px;
+   
+}
+
+/* Fake image */
+.fakeimg {
+  /*  background-color: #aaa;    */
+    height: auto;
+    padding: 10px;
+    margin-top: 2px;
+
+  
+}
+
+/* Add a card effect for articles */
+.card {
+ /*   background-color: lightblue; */
+    
+     margin-top: 2px;
+   
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.icon{
+    width: 7%;
+  height: auto;
+
+}
+.footer {
+  background-color: rgba(26, 24, 25, 0.5);
+   height: 50px; /* ความสูงของ footer */
+   display: block;
+   text-align: center;
+}
+a:link {
+color: #000000;
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+color: black;
+}
+a:hover {
+text-decoration: none;
+color: #0000FF;
+}
+a:active {
+text-decoration: none;
+color: #0000FF;
+}
+
+
+
+  </style>
+  {% endblock %}
+
+
+
+{% block content %}
+<div class="top"></div> <!--id for on top-->
+<!-- class=mar tag-->
+<div class="mar">
+
+
+<div> <!-- start blog-->
+    <div class="row">
+        <!--blog review1-->
+            <div class="leftcolumn"> <a href="review1.html">
+              <div class="card"style="background-color: rgba(122, 163, 194, 0.2);">
+                <div><center><img src="../static/img/review1/1.jpg" class="fakeimg" style="width:340px"></center></div>  
+            </div> 
+            <center><p>เมื่อใจต้องการทะเลจึงเซไปเกาะกูด By Sarun</p></center>
+            </div></a>
+         <!--End blog review1-->  
+         <!--blog review2-->
+         <div class="leftcolumn"><a href="review1.html">
+                <div class="card"style="background-color: rgba(122, 163, 194, 0.2);">
+                  <div><center><img src="../static/img/review2/1.jpg" class="fakeimg" style="width:340px"></center></div>  
+              </div> 
+              <center><p>"ล่องแพเขื่อนกิ่วลม" สัมผัสกับความชิลที่มีอยู่จริงบนผืนน้ำจังหวัดลำปาง By Peeranut P.</p></center>
+              </div></a>
+           <!--End blog review2-->  
+           <!--blog review3-->
+           <div class="leftcolumn"><a href="review3.html">
+                <div class="card"style="background-color: rgba(122, 163, 194, 0.2);">
+                  <div><center><img src="../static/img/review3/1.jpg" class="fakeimg" style="width:340px"></center></div>  
+              </div> 
+              <center><p>Make Awake คุ้มค่าตื่นที่ จ.ระนอง ไม่ไปไม่ได้แล้ว!สัมผัสกับความชิลที่มีอยู่จริงบนผืนน้ำจังหวัดลำปาง</p></center>
+              </div></a>
+           <!--End blog review3-->   
+
+           <!--blog review4-->
+           <div class="leftcolumn"><a href="review4.html">
+                <div class="card"style="background-color: rgba(122, 163, 194, 0.2);">
+                  <div><center><img src="../static/img/review4/1.jpg" class="fakeimg" style="width:340px"></center></div>  
+              </div> 
+              <center><p>ร้านกาแฟ 180 องศา จุดเช็คอินชมทะเลหมอกแห่งใหม่ของเขาค้อ</p></center>
+              </div></a>
+           <!--End blog review4-->  
+           <!--blog review5-->
+           <div class="leftcolumn"><a href="review5.html">
+                <div class="card"style="background-color: rgba(122, 163, 194, 0.2);">
+                  <div><center><img src="../static/img/review5/3.jpg" class="fakeimg" style="width:340px"></center></div>  
+              </div> 
+              <center><p>เกาะขายหัวเราะ! เมื่อเกาะร้างในการ์ตูนขายหัวเราะมีอยู่จริงในประเทศไทย</p></center>
+              </div></a>
+           <!--End blog review5-->  
+           <!--blog review6-->
+           <div class="leftcolumn"><a href="review6.html">
+                <div class="card"style="background-color: rgba(122, 163, 194, 0.2);">
+                  <div><center><img src="../static/img/review6/1.jpg" class="fakeimg" style="width:340px"></center></div>  
+              </div> 
+              <center><p>กม.7 โฮมสเตย์ จุดชมวิวทะเลหมอก สวรรค์บนดินแห่งเบตง</p></center>
+              </div></a>
+           <!--End blog review6-->  
+         
+            
+            
+          </div><!-- End div class="row"-->
+         
+</div><!-- end blog-->
+
+
+
+
+
+
+
+
+
+
+    
+</div><!--end class=mar tag-->
+
+<!-- footer tag-->
+<div class="footer">
+
+<!-- Back-to-top Button-->
+<a href="#top" class="cd-top"><img src="../static/img/icons8-slide-up-100.png" style="width:50px;height:50px;margin-right:5%;" align="Right" ></a>
+<script>
+    jQuery(document).ready(function($){
+   
+    var offset = 300,
+     
+        offset_opacity = 1200,
+       
+        scroll_top_duration = 700,
+    
+        $back_to_top = $('.cd-top');
+
+   
+    $(window).scroll(function(){
+        ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+        if( $(this).scrollTop() > offset_opacity ) {
+            $back_to_top.addClass('cd-fade-out');
+        }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+        event.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0 ,
+             }, scroll_top_duration
+        );
+    });
+
+});
+</script><!-- End Back-to-top Button-->
+
+
+</div><!--end footer tag-->
+
+
+
+
+
+
+{% endblock %}

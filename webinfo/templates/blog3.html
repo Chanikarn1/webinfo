@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="topbutton.css"> <!-- ปุ่มลูกศรขึ้นบนเพจ-->
   <style>
   #mainpic{
 
@@ -14,25 +16,52 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
   img{
-  width: 60%;
+  width: 70%;
   height: auto;
 
   }
+  #pinpic {
+    width: 9%;
+  height: auto;
+  }
+    
+  .mar {
+  margin-right: 10%;
+    margin-left: 10%;
+}
+p,h1,h3 {
+    font-family: 'Kanit', sans-serif;
+}
+.icon{
+    width: 7%;
+  height: auto;
 
+}
+.footer {
+  background-color: rgba(26, 24, 25, 0.5);
+   height: 50px; /* ความสูงของ footer */
+   display: block;
+   text-align: center;
+} 
  
- 
-  
+
+
   </style>
   {% endblock %}
 
 {% block content %}
+<div class="top"></div><!--id for on top-->
+<div class="mar">
 <center>
     <h1>10 ที่เที่ยวหน้าหนาวยอดฮิตของภาคเหนือ...ที่ไปแล้วจะหนาว</h1>
   <img src="../static/img/blog3/1.jpg" id="mainpic" >
-  </center><br>
+  </center><br><br><br><br><br>
   
   <div class="first"> 
-  <p><h3>1. ดอยอินทนนท์, เชียงใหม่ (Doi Inthanon National Park, Chiang Mai)</h3>
+      <center>
+          <img src="../static/img/icon number/1.png"id="pinpic">
+        </center>
+  <h3>1. ดอยอินทนนท์, เชียงใหม่ (Doi Inthanon National Park, Chiang Mai)</h3><p>
     ฮิตทุกปี ฮิตตลอด ลมหนาวมาเมื่อไหร่ดอยอินทนนท์ไม่เคยขาดนักท่องเที่ยว เพราะเป็นจุดสูงสุดแดนสยามพูดได้ว่าถ้าเข้าช่วงธันวาคม-มกราคม
     ก็หนาวแน่นอน ใครโชคดีไปเที่ยวตอนอากาศเย็นได้ที่ก็จะได้เห็นยอดน้ำค้างแข็งอีกด้วย ดอยอินทนนท์ไม่ได้มีเพียงป้ายสูงสุดแดนสยามเท่านั้นที่
     ทำให้ฮิต บริเวณนี้ยังมีสถานที่ท่องเที่ยวอีกหลายแห่งที่ต้องไป เช่น พระธาตุนภเมทนีดลและพระธาตุนภพลภูมิสิริ, น้ำตกวชิรธาร, น้ำตกแม่ยะ,
@@ -43,9 +72,14 @@
   </center>
   </div>
   <br><br>
-  
+
+  <center>
+      <br><br><br>
+      <img src="../static/img/icon number/2.png"id="pinpic">
+    </center>
+
   <div class="second">
-      <p><h3>2. ดอยอ่างขาง, เชียงใหม่ (Doi Ang Khang, Chiang Mai)</h3>
+      <h3>2. ดอยอ่างขาง, เชียงใหม่ (Doi Ang Khang, Chiang Mai)</h3><p>
         ดอยอ่างขางไม่แปลกที่จะฮิตและมีคนมาเที่ยวกันล้นหลาม เพราะอุทยานแห่งชาติห้วยน้ำดังเป็นหนึ่งในจุดชมวิวทะเลหมอกที่สวยอันดับต้นๆ 
         ของไทยเลยทีเดียว แถมช่วงปลายฤดูหนาวยังมีดอกไม้หลากสีสันบานสวยอีกด้วย จุดชมวิวบริเวณห้วยน้ำดัง (ดอยกิ่วลม) 
         เป็นจุดชมวิวที่สวยงามและมีชื่อเสียงมาก เพราะจากจุดนี้เราสามารถมองเห็นดอยเชียงดาวได้ ใกล้ๆ กันยังมีจุดท่องเที่ยวอื่นๆ 
@@ -60,8 +94,14 @@
       </center>
       </div>
       <br><br>
+
+      <center>
+          <br><br><br>
+            <img src="../static/img/icon number/3.png"id="pinpic">
+          </center>
+
   <div class="third">
-    <p><h3>3. อุทยานแห่งชาติห้วยน้ำดัง, เชียงใหม่ (Huai Nam Dang National Park, Chiang Mai)</h3>
+   <h3>3. อุทยานแห่งชาติห้วยน้ำดัง, เชียงใหม่ (Huai Nam Dang National Park, Chiang Mai)</h3> <p>
         ดอยอ่างขางฮิตตีคู่มากับดอยอินทนนท์เลยทีเดียว เพราะทั้งหวานทั้งเย็นจนหลายๆ 
         คนยกให้เป็นสถานที่สุดโรแมนติกในช่วงหน้าหนาวกันเลย ในช่วงนี้แทบทั้งดอยจะอบอวลไปด้วยสีชมพูของดอกนางพญาเสือโคร่ง 
         และถ้าเข้าไปที่สถานีเกษตรหลวงอ่างขางก็จะเจอกับดอกไม้นานาชนิดที่ถูกจัดแต่งไว้อย่างสวยงาม ถ่ายรูปมุมไหนก็สวยไปหมด 
@@ -74,8 +114,14 @@
       </center>
       </div>
       <br><br>
+
+      <center>
+          <br><br><br>
+            <img src="../static/img/icon number/4.png"id="pinpic">
+          </center>
+
   <div class="fourth">
-    <p><h3>4. ภูชี้ฟ้า, เชียงราย (Phu Chi Fa, Chiang Rai)    </h3>
+   <h3>4. ภูชี้ฟ้า, เชียงราย (Phu Chi Fa, Chiang Rai)    </h3> <p>
         ภูชี้ฟ้าเป็นหนึ่งในจุดชมวิวทะเลหมอกยอดฮิตในเชียงรายที่จะไม่ทำให้คุณผิดหวัง วิวสวยๆ ของทะเลหมอกสีขาวที่กว้างสุดลูกหูลูกตา 
         ภูเขาสลับซับซ้อนและอากาศหนาวๆ ที่ถ้าใครได้มาสัมผัสแล้วจะต้องอยากมาซ้ำอีกครั้งแน่นอน  ที่นี่ไม่ได้มีดีที่ทะเลหมอกเท่านั้น 
         แต่ยังเป็นจุดถ่ายรูปพระอาทิตย์ขึ้นที่สวยที่สุดแห่งหนึ่งด้วยเช่นกัน
@@ -87,8 +133,14 @@
       </center>
       </div>
       <br><br>
+
+      <center>
+          <br><br><br>
+            <img src="../static/img/icon number/5.png"id="pinpic">
+          </center>
+
   <div class="fifth">
-    <p><h3>5. พระตำหนักดอยตุงและสวนแม่ฟ้าหลวง, เชียงราย (Doi Tung Royal Villa, Chiang Rai)    </h3>
+    <h3>5. พระตำหนักดอยตุงและสวนแม่ฟ้าหลวง, เชียงราย (Doi Tung Royal Villa, Chiang Rai)    </h3><p>
         "พระตำหนักดอยตุง" หรือ "พระตำหนักสมเด็จย่า" ที่ปลูกสร้างขึ้นมาในกลิ่นอายล้านนาผสมผสานกับความเรียบง่าย 
         ไฮไลท์ของดอยตุงคือสามารถเยี่ยมชมห้องบรรทมและห้องทรงงานได้ (แต่ห้ามถ่ายรูปนะ) 
         อีกจุดคือบริเวณสวนแม่ฟ้าหลวงที่เต็มไปด้วยดอกไม้เมืองหนาวหลากสีสัน และยังมีร้านขายของที่ระลึก 
@@ -101,8 +153,15 @@
       </center>
       </div>
       <br><br>
+
+      <center>
+          <br><br><br>
+            <img src="../static/img/icon number/6.png"id="pinpic">
+          </center>
+
+
   <div class="sixth">
-    <p><h3>6. อุทยานแห่งชาติศรีน่าน, น่าน (Si Nan National Park, Nan)    </h3>
+    <h3>6. อุทยานแห่งชาติศรีน่าน, น่าน (Si Nan National Park, Nan)    </h3><p>
         ที่อุทยานแห่งชาติศรีน่านมีจุดชมทะเลหมอกยามเช้าที่สวยงามมากๆ ถึงสองจุด คือที่ดอยผาชู้และดอยเสมอดาว 
         ซึ่งดอยเสมอดาวนั้นเป็นหนึ่งในแหล่งท่องเที่ยวฮิตและมีชื่อเสียงมากแห่งหนึ่งในน่าน 
         ขึ้นชื่อเรื่องความสวยงามของธรรมชาติทั้งในตอนเช้าที่มีทะเลหมอกขาวๆ และตอนกลางคืนที่สามารถมองเห็นดาวเต็มท้องฟ้าได้อย่างเจน
@@ -115,8 +174,14 @@
       </center>
       </div>
       <br><br>
+
+      <center>
+          <br><br><br>
+            <img src="../static/img/icon number/7.png"id="pinpic">
+          </center>
+
     <div class="seventh">
-        <p><h3>7. อุทยานแห่งชาติขุนสถาน, น่าน (Khun Sathan National Park, Nan) </h3>
+        <h3>7. อุทยานแห่งชาติขุนสถาน, น่าน (Khun Sathan National Park, Nan) </h3><p>
             อุทยานแห่งชาติขุนสถานในช่วงหน้าหนาวนั้นมีบรรยากาศดีและวิวสวยจนลืมเวลา นอกจากทะเลหมอกที่เป็นไฮไลท์หลักแล้ว 
             ถ้าโอกาสดีคุณอาจได้เห็นต้นนางพญาเสือโคร่งผลิดอกสีชมพูตลอดสองข้างทางอีกด้วย 
             บนอุทยานแห่งชาติขุนสถานมีบ้านพักและลานกางเต็นท์ให้บริการสำหรับคนที่อยากนอนค้างเสพบรรยากาศให้เต็มที่ 
@@ -130,8 +195,14 @@
           </center>
           </div>
           <br><br>
+
+          <center>
+              <br><br><br>
+                <img src="../static/img/icon number/8.png"id="pinpic">
+              </center>
+
       <div class="eight">
-        <p><h3>8. ปางอุ๋ง, แม่ฮ่องสอน (Pang Oung, Mae Hong Son)    </h3>
+        <h3>8. ปางอุ๋ง, แม่ฮ่องสอน (Pang Oung, Mae Hong Son)    </h3><p>
             ช่วงหน้าหนาวปางอุ๋งจะแน่นไปด้วยผู้คน ทั้งคนที่มาตั้งเต็นท์นอนเก็บบรรยากาศและคนที่มาแวะชมธรรมชาติที่สวยสงบ
              ไฮไลท์เด็ดของปางอุ๋งที่ถ้ามาแล้วต้องเห็นให้ได้คือภาพของไอหมอกที่ลอยเลียบบนผิวน้ำขอบอกว่าสวยสุดๆ 
              จะมีให้เห็นในช่วงเช้าเท่านั้น ยิ่งตอนพระอาทิตย์ขึ้นแสงแดดจะสะท้อนบนผิวน้ำเป็นสีทองสวยขึ้นไปอีก 
@@ -145,8 +216,14 @@
           </div>
           <br><br>
 
+          <center>
+              <br><br><br>
+                <img src="../static/img/icon number/9.png"id="pinpic">
+              </center>
+
+
           <div class="nineth">
-             <p><h3>9. ดอยแม่อูคอ, แม่ฮ่องสอน (Doi Mae U-Kho, Mae Hong Son) </h3>
+             <h3>9. ดอยแม่อูคอ, แม่ฮ่องสอน (Doi Mae U-Kho, Mae Hong Son) </h3><p>
                 ฮิตที่ความสวยไม่เหมือนใครของทุ่งดอกบัวตองที่ใหญ่ที่สุดในไทย ขึ้นปกคลุมยอดเขาจนเหลืองอร่ามไปทั่ว 
                 ทุ่งดอกบัวตองจะบานสะพรั่งในช่วงที่ลมหนาวเริ่มมาเยือนคือเดือนฤศจิกายน – ธันวาคม ของทุกปี 
                 ถ้าขึ้นมาที่จุดชมวิวดอยแม่อูคอจะได้เห็นทิวทัศน์ของทุ่งดอกบัวตองแบบ 360 องศาเลยทีเดียว
@@ -157,10 +234,14 @@
           </center>
           </div>
           <br><br>
-  
-  
+
+          <center>
+              <br><br><br>
+                <img src="../static/img/icon number/10.png"id="pinpic">
+              </center>
+
             <div class="ten">
-                <p><h3>10. ดอยผาตั้ง, เชียงราย (Doi Pha Tang, Chiang Rai)
+               <h3>10. ดอยผาตั้ง, เชียงราย (Doi Pha Tang, Chiang Rai) <p>
                 </h3>
                 อีกหนึ่งสถานที่เที่ยวฮิตของจังหวัดเชียงราย ดอยผาตั้งเป็นจุดชมวิวพระอาทิตย์ขึ้นและทะเลหมอกยามเช้าที่สวยงามมากแห่งหนึ่ง 
                 ที่จุดชมวิวช่องผาบ่องยังสามารถมองเห็นแม่น้ำโขงและเห็นยอดภูชี้ฟ้าที่อยู่ห่างออกไปราว 25 กิโลเมตรได้อีกด้วย 
@@ -174,9 +255,46 @@
               </div>
               <br><br>
 
+            </div>
 
+<!-- footer tag-->
+<div class="footer">
 
+  <!-- Back-to-top Button-->
+  <a href="#top" class="cd-top"><img src="../static/img/icons8-slide-up-100.png" style="width:50px;height:50px;margin-right:5%;" align="Right" ></a>
+  <script>
+      jQuery(document).ready(function($){
+     
+      var offset = 300,
+       
+          offset_opacity = 1200,
+         
+          scroll_top_duration = 700,
+      
+          $back_to_top = $('.cd-top');
+  
+     
+      $(window).scroll(function(){
+          ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+          if( $(this).scrollTop() > offset_opacity ) {
+              $back_to_top.addClass('cd-fade-out');
+          }
+      });
+  
+       //smooth scroll to top
+    $back_to_top.on('click', function(event){
+        event.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0 ,
+             }, scroll_top_duration
+        );
+    });
 
+});
+  </script><!-- End Back-to-top Button-->
+  
+  
+  </div><!--end footer tag-->      
 
 
 {% endblock %}
