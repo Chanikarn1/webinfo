@@ -22,8 +22,8 @@
         </div>
         <div class="navbar-content">
           <div class="firstsection">
-            <a class="#active" href="#home">Review</a>
-            <a href="#news">Event</a>
+            <a class="#active" href="review.html">Review</a>
+            <a href="event1.html">Event</a>
             {% if username %}
             <a href="{{ url_for('user_review') }}">User Review</a>
             {% else %}
@@ -32,9 +32,10 @@
             <a href="contact.html">Contact</a>
             {% if username %}
             <a href="{{ url_for('logout') }}" onclick="return ConfirmLogOut()">Log out</a>
+          </div>
+          <div class="second-section">
             <p>Hello!, {{ username }}</p>
           </div>
-                      
           {% else %}
           
           <div class="second-section">
@@ -53,13 +54,17 @@
       </div>
     </div>
   </div>
+
   <button onclick="topFunction()" id="myButtontop" title="Go to top">Top</button>
+
   {% block content %}
     <!-- index -->
   {% endblock %}
+
   <div class="footer">
-      <p style="color: rgba(255, 255, 255, 0.555);">On My Way | Copyright &copy;  2018 By Chanikan Rujimetineekul, Jidapa Dumrongsombat, Kamolwan Kladjed</p>
+      <p>"On My Way | Copyright &copy;  2018 By Chanikan Rujimetineekul, Jidapa Dumrongsombat, Kamolwan Kladjed</p>
   </div>
+
   <script>
     function ConfirmLogOut(){
       if (!confirm("Are you sure?")){

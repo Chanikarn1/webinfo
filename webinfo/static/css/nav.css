@@ -13,14 +13,14 @@ body{
     background-color: #333;
     opacity: 0.7;
     filter:alpha (opacity=70);
-    z-index: 5;
+    z-index: 4;
 }
 .navbar-scrolled {
     position: fixed;
     width: 100%;
     opacity: 0.9;
     background-color: skyblue;
-    z-index: 5;
+    z-index: 4;
 }
 
 .navbar-scrolled a {
@@ -141,14 +141,15 @@ body{
   }
 
 .footer {
-    background-color: rgba(26, 24, 25, 0.5);
-    
-    height: 50px; /* ความสูงของ footer */
+    background-color: red;
+    color: white;
+    position: absolute;
+    width: 100%;
     clear: both;
-    
-    z-index: 10;
+    z-index: 2;
     height: 3em;
     margin-top: -3em;
+    
 }  
 .footer p {
     text-align: center;

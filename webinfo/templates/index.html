@@ -11,8 +11,8 @@
 {% endblock %}
 {% block content %}
 
+
 <div class="slideshow-container">
-  <!-- Full-width images with number and caption text -->
   <div class="slide-image">
     <div class="mySlides fade">
       <img src="../static/img/slide1.jpg" style="width:100%">
@@ -24,11 +24,11 @@
       <img src="../static/img/slide3.jpg" style="width:100%">
     </div>
   </div>
-  
-
 </div>
+
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 <div class="search">
   <center>
     <h1 style="color: white">อยากไปเที่ยวไหน ?</h1>
@@ -37,15 +37,13 @@
     <input type="text" name="search" placeholder="Search..">
   </form>
 </div>      
-<!-- The dots/circles -->
-<div class="dots" style="text-align:center">
+
+<div class="dots">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-<!-- Next and previous buttons -->
 
-<script src="../static/js/index.js"></script>
 
 <div class="box-content">
   <h1>บล็อกยอดนิยม</h1>
@@ -127,4 +125,6 @@
     </div>
   </div>
 </div>
+
+<script src="../static/js/index.js"></script>
 {% endblock %}

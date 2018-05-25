@@ -55,6 +55,10 @@ margin-right: 5%;
     
 }
 
+
+.row {
+    margin-top: 9%;
+}
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -70,6 +74,8 @@ height: auto;
 
 
 .first {
+    margin-top: 7%;
+    margin-bottom: 7%;
     background-color: rgba(122, 163, 194, 0.2);
     margin-right: 10%;
     margin-left: 10%;
