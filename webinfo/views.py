@@ -1,17 +1,95 @@
 from webinfo import app
-from flask import render_template, flash, redirect, session, request, url_for
-from .models import User, db, Contact
+from flask import  render_template, flash, redirect, session, request, url_for
+from .models import User, db, Contact, ReviewByUser
 import os
+
+__author__ = 'ibininja'
+
+
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 @app.route("/")
 @app.route("/index.html")
 def index():
     username = session.get('username', '')
+    session['username'] = username
     return render_template("index.html", username=username)
 
 @app.route("/about_us.html")
 def about_us():
     return render_template("web/about_us.html")
+
+@app.route("/upload.html", methods=("GET", "POST"))
+def upload():
+#     test=""
+#     target = os.path.join(APP_ROOT, './static/img/ImgUpload/')
+#     print(target)
+    
+#     if not os.path.isdir(target):
+#         os.mkdir(target)
+#     for file in request.files.getlist("file"):
+#         test="HELLO"
+#         print(file)
+#         filename = file.filename
+#         destination = "/".join([target, filename])
+#         print(destination)
+        
+#         file.save(destination)
+      
+
+
+    return render_template("user_Review.html")
+
+    
+@app.route("/user_Review.html", methods=("GET", "POST"))
+def user_review():
+    
+    username = session.get('username', '')
+    # session['username'] = username
+    error = ""
+    test = ""
+    if not username:
+        return redirect(url_for('.login'))
+
+    if request.method == "POST":
+        
+        message_review = request.form["msg"] #msg name ของ Form ทีส่งมา message_review เป็นไรก็ได้
+        go_date = request.form["goday"]
+        back_date = request.form["backday"]
+        money = request.form["money"]
+        NameTrip = request.form["NameTrip"]
+        if message_review == "" or go_date == "" or back_date=="":
+            error = 'Please enter your field.'
+        else:
+            if error == "":
+                test="test"
+                try:
+                    review = ReviewByUser(message=message_review,go_date=go_date,back_date=back_date,money=money,NameTrip = NameTrip,ImageName="") #ด้านหน้าเป็นแอตทริบิวเทเบิ้ล ด้านหลังเป็นค่าที่ส่งมจาก Form
+                
+                    db.session.add(review)
+                    db.session.commit() 
+                    # session['message'] = message
+                    # flash('Register successfully.', 'success')
+                    
+                    target = os.path.join(APP_ROOT, './static/img/ImgUpload/')
+                    print(target)
+                    
+                    if not os.path.isdir(target):
+                        os.mkdir(target)
+                    for file in request.files.getlist("file"):
+                        test="HELLO"
+                        print(file)
+                        filename = file.filename
+                        destination = "/".join([target, filename])
+                        print(destination)
+                        
+                        file.save(destination)
+                        
+                    return redirect(url_for('.login'))
+                except:
+                    db.session.rollback()
+                    error = "Something Wrong!"
+    return render_template("user_Review.html",error=error,test=test,username=username)
 
 @app.route("/contact.html", methods=("GET", "POST"))
 def contact():
@@ -163,7 +241,7 @@ def register():
                     new_user = User(username=username,password=password)
                     db.session.add(new_user)
                     db.session.commit()
-                    session['username'] = username
+                    session['username'] = username #การได้ session มา !! แล้วไปดู login
                     session['password'] = password
                     flash('Register successfully.', 'success')
                     return redirect(url_for('.login'))
