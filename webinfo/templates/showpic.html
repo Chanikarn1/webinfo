@@ -1,0 +1,18 @@
+{% extends "nav.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+<style>
+.box{
+display: inline;
+}
+</style>
+{% block content %}
+{%for x in usertrip %} 
+<div class="box">
+<h1>{{x.NameTrip}}</h1>
+   <a href="{{  url_for('detail',nametrip=x.NameTrip) }}"><img src="../static/img/ImgUpload/{{x.ImageName}}" style="width: 340px; "> </a>
+</div>
+{% endfor %}
+{% endblock %}

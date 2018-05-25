@@ -2,7 +2,8 @@ from webinfo import app
 from flask import  render_template, flash, redirect, session, request, url_for
 from .models import User, db, Contact, ReviewByUser
 import os
-
+from os import listdir
+from os.path import isfile, join
 __author__ = 'ibininja'
 
 
@@ -15,32 +16,15 @@ def index():
     session['username'] = username
     return render_template("index.html", username=username)
 
-@app.route("/about_us.html")
-def about_us():
-    return render_template("web/about_us.html")
-
-@app.route("/upload.html", methods=("GET", "POST"))
-def upload():
-#     test=""
-#     target = os.path.join(APP_ROOT, './static/img/ImgUpload/')
-#     print(target)
-    
-#     if not os.path.isdir(target):
-#         os.mkdir(target)
-#     for file in request.files.getlist("file"):
-#         test="HELLO"
-#         print(file)
-#         filename = file.filename
-#         destination = "/".join([target, filename])
-#         print(destination)
-        
-#         file.save(destination)
-      
-
-
-    return render_template("user_Review.html")
-
+@app.route("/showpic.html")
+def showpic():
+    usertrip = ReviewByUser.query.all()
    
+    return render_template("showpic.html",usertrip=usertrip)
+
+
+
+
 @app.route("/user_Review.html", methods=("GET", "POST"))
 def user_review():
       
@@ -51,6 +35,18 @@ def user_review():
     if not username:
         return redirect(url_for('.login'))
 
+    imgUpload = "./static/img/ImgUpload/"
+    imgPath = os.path.join("C:/", "My-Project1", "webinfo", "webinfo", "static", "img", "ImgUpload")
+    try:
+        trip = os.listdir(imgPath)
+        
+    except OSError as e:
+        print(e.errno)
+        print(e.filename)
+        print(e.strerror)
+        pass
+
+    
     if request.method == "POST":
         
         message_review = request.form["msg"] #msg name ของ Form ทีส่งมา message_review เป็นไรก็ได้
@@ -64,33 +60,44 @@ def user_review():
             if error == "":
                 test="test"
                 try:
-                    review = ReviewByUser(message=message_review,go_date=go_date,back_date=back_date,money=money,NameTrip = NameTrip,ImageName="") #ด้านหน้าเป็นแอตทริบิวเทเบิ้ล ด้านหลังเป็นค่าที่ส่งมจาก Form
-                
-                    db.session.add(review)
-                    db.session.commit() 
-                    # session['message'] = message
-                    # flash('Register successfully.', 'success')
-                    
-                    target = os.path.join(APP_ROOT, './static/img/ImgUpload/')
-                    print(target)
-                    
+                    target = os.path.join(APP_ROOT, imgUpload)
+            
                     if not os.path.isdir(target):
                         os.mkdir(target)
                     for file in request.files.getlist("file"):
                         test="HELLO"
                         print(file)
                         filename = file.filename
-                        destination = "/".join([target, filename])
-                        print(destination)
-                        
-                        file.save(destination)
-                     
-        
+                       
+                        temp_name = "trip.jpg"
+                        oldname = temp_name.split(".")[0]
+                        trip_file = check_exist_file(temp_name, trip, 1, oldname)
+                        image_name = trip_file
+                        print(image_name)
+                        trip_file = "/".join([target,trip_file])
+                        file.save(trip_file)
+                        print("a")
+                        review = ReviewByUser(message=message_review,go_date=go_date,back_date=back_date,money=money,NameTrip = NameTrip,ImageName=image_name) #ด้านหน้าเป็นแอตทริบิวเทเบิ้ล ด้านหลังเป็นค่าที่ส่งมจาก Form
+                        print("b")
+                        db.session.add(review)
+                        db.session.commit() 
+                        print("c")
                     return redirect(url_for('.detail',nametrip=NameTrip,username=username))
                 except:
                     db.session.rollback()
                     error = "Something Wrong!"
     return render_template("user_Review.html",error=error,test=test,username=username)
+
+def check_exist_file(filename, filelist, i, oldname=None):
+    print(filename)
+    if filename in filelist:
+        print(i)
+        splitname = filename.split('.')
+        fullname = oldname + str(i) + "." + splitname[1]
+        return check_exist_file(fullname, filelist, i+1, oldname)
+    else:
+        print("success" + " " + filename)
+        return filename
 
 @app.route("/contact.html", methods=("GET", "POST"))
 def contact():
@@ -227,6 +234,7 @@ def login():
                 else:
                     error = 'Invalid username or password. Please try again.'
     return render_template('login.html', error=error, username=username, password=password)
+
 
 @app.route("/register.html", methods=["GET","POST"])
 def register():
