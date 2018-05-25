@@ -150,6 +150,14 @@ def blog4():
 def blog5():
     return render_template("/blog5.html")
 
+@app.route("/like.html")
+def like():
+    return render_template("/like.html")
+
+@app.route("/slide.html")
+def slide():
+    return render_template("/slide.html")
+
 @app.route("/join.html")
 def join():
     return render_template("web/join.html")

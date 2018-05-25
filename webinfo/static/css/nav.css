@@ -13,10 +13,11 @@ body{
     background-color: #333;
     opacity: 0.7;
     filter:alpha (opacity=70);
-    z-index: 1;
+    z-index: 5;
 }
 .navbar-scrolled {
     position: fixed;
+    z-index: 5;
     width: 100%;
     opacity: 0.9;
     background-color: skyblue;
@@ -45,6 +46,15 @@ body{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    
+}
+
+p{
+    font-family: 'Kanit', sans-serif;
+}
+
+
+li a:hover {
     font-size: 17px;
 }
 

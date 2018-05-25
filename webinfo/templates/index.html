@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../static/css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% endblock %}
@@ -24,6 +25,7 @@
     </div>
   </div>
   
+
 </div>
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -42,10 +44,92 @@
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 <!-- Next and previous buttons -->
-<script src="../static/js/slide.js"></script> 
+
+<script src="../static/js/index.js"></script>
 
 <div class="box-content">
- 
-  
+  <div class="gallery">
+    <div class="image-frame">
+        <a  href="blog1.html">
+          <img src="../static/img/summer/1.jpg" alt="Fjords">
+        </a>
+    </div>
+    <div class="heart-icon">
+      <div class="desc">10 เกาะน่าเที่ยวช่วงซัมเมอร์
+          <i  onclick="myfunction(1)" class="fa fa-heart"  ></i>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="gallery">
+    <div class="image-frame">
+    <a  href="blog2.html">
+      <img src="../static/img/greenseason/greenseason1.jpg" alt="Forest" >
+    </a>
+  </div>
+  <div class="heart-icon">
+      <div class="desc"> 5 เมืองน่าเที่ยวช่วงกรีนซีซั่น สวยไม่หวั่น แม้วันเปียกปอน
+    <i  onclick="myfunction(2)" class="fa fa-heart"  ></i>
+  </div>
+    </div>
+  </div>
+
+  <div class="gallery">
+      <div class="image-frame">
+    <a  href="blog3.html"> 
+      <img src="../static/img/blog3/1.jpg" alt="Northern Lights">
+    </a>
+  </div>
+  <div class="heart-icon">
+      <div class="desc">10 ที่เที่ยวหน้าหนาวยอดฮิตของภาคเหนือ...ที่ไปแล้วจะหนาว
+    <i  onclick="myfunction(3)" class="fa fa-heart"  ></i>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="gallery">
+      <div class="image-frame">
+    <a  href="blog4.html">
+    <img src="../static/img/rain/rain.jpg" alt="Northern Lights">
+    </a>
+  </div>
+  <div class="heart-icon">
+    <div class="desc">5 จุดเช็คอินหน้าฝน กินเที่ยวแบบชุ่มฉ่ำ ชิลได้แม้ในวันฝนพรำ
+  <i  onclick="myfunction(4)" class="fa fa-heart"  ></i>
+  </div>
+  </div>
+  </div>
+
+
+
+  <div class="gallery">
+      <div class="image-frame">
+    <a href="blog5.html">
+    <img src="../static/img/seanomountain/seanomountain.jpg" alt="Northern Lights">
+    </a>
+  </div>
+  <div class="heart-icon">
+      <div class="desc">5 ทะเลหน้าฝนเที่ยวได้แบบไม่ต้องแคร์เขา
+  <i  onclick="myfunction(5)" class="fa fa-heart"  ></i>
+  </div>
 </div>
+  </div>
+
+
+
+  <div class="gallery">
+      <div class="image-frame">
+    <a  href="blog6.html">
+      <img src="../static/img/blog6/1.jpg" alt="Northern Lights">
+    </a>
+  </div>
+  <div class="heart-icon">
+      <div class="desc">10 ที่เที่ยวในลาวที่ไม่ควรพลาด ตั้งแต่เหนือจรดใต้
+    <i  onclick="myfunction(6)" class="fa fa-heart"  ></i>
+    </div>
+    </div>
+</div>
+
 {% endblock %}

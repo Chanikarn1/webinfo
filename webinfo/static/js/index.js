@@ -48,3 +48,17 @@ function carousel() {
     setTimeout(carousel,8000); // Change image every 2 seconds
 } 
 
+function myfunction(x){
+    var a = document.getElementsByClassName("fa")[x];
+    if (a.style.color == "red") {
+        a.style.color = "gray";
+    } else {
+        a.style.color = "red";
+    }
+}
+
+
+    
+
+
+
