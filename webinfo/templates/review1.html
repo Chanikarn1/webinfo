@@ -6,40 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../static/css/review.css">
 
   <style>
-  #mainpic{
-
-  width: 67%;
-  height: auto;
-  margin-top: 5%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  }
-  img{
-  width: 60%;
-  height: auto;
-
-  }
-  p,h1 {
-    font-family: 'Kanit', sans-serif;
-}
-  
-.first {
-    background-color: rgba(122, 163, 194, 0.2);
-    margin-right: 10%;
-    margin-left: 10%;
-}
-.icon{
-    width: 7%;
-  height: auto;
-
-}
-.footer {
-  background-color: rgba(26, 24, 25, 0.5);
-   height: 50px; /* ความสูงของ footer */
-   display: block;
-   text-align: center;
-} 
 
   </style>
 
@@ -255,44 +224,7 @@
                
 </div>
  
-<!-- footer tag-->
-<div class="footer">
-
-  <!-- Back-to-top Button-->
-  <a href="#top" class="cd-top"><img src="../static/img/icons8-slide-up-100.png" style="width:50px;height:50px;margin-right:5%;" align="Right" ></a>
-  <script>
-      jQuery(document).ready(function($){
-     
-      var offset = 300,
-       
-          offset_opacity = 1200,
-         
-          scroll_top_duration = 700,
-      
-          $back_to_top = $('.cd-top');
-  
-     
-      $(window).scroll(function(){
-          ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-          if( $(this).scrollTop() > offset_opacity ) {
-              $back_to_top.addClass('cd-fade-out');
-          }
-      });
-  
-       //smooth scroll to top
-    $back_to_top.on('click', function(event){
-        event.preventDefault();
-        $('body,html').animate({
-            scrollTop: 0 ,
-             }, scroll_top_duration
-        );
-    });
-
-});
-  </script><!-- End Back-to-top Button-->
-  
-  
-  </div><!--end footer tag-->      
+    
 
 
 {% endblock %}

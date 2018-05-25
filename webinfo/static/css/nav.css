@@ -132,7 +132,7 @@ margin-left: -10%;
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: grey;
+    background-color: rgba(43, 41, 41, 0.973);
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -142,4 +142,10 @@ margin-left: -10%;
   #myButtontop:hover {
     background-color:orangered;
   }
- 
+
+.footer {
+background-color: rgba(26, 24, 25, 0.5);
+    height: 50px; /* ความสูงของ footer */
+    display: block;
+    text-align: center;
+}  
