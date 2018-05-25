@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+    .fa{
+        font-size: 100px;
+        cursor: pointer;
+        margin-left:50%;
+        margin-top:15%;
+        color:gray;
+    }
+    
+</style>
+
+</head>
+<body>
+    <i onclick="myfunction(this)" class="fa fa-heart"  ></i>
+    <script>
+        function myfunction(x){
+        var a = document.getElementsByClassName("fa")[0];
+        if (a.style.color == "red") {
+            a.style.color = "gray";
+        } else {
+            a.style.color = "red";
+        }
+        // x.classList.toggle("fa fa-heart");
+        }
+    </script>
+</body>
+</html>
