@@ -1,151 +1,158 @@
-body{margin: 0;
-    /* background-color: pink; */
+body{
+    margin: 0;
     height: 100%;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+#header {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
     background-color: #333;
-    
+    opacity: 0.7;
+    filter:alpha (opacity=70);
+    z-index: 5;
+}
+.navbar-scrolled {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    opacity: 0.9;
+    background-color: skyblue;
 }
 
-li {
-    overflow: hidden;
+.navbar-scrolled a {
     float: left;
-}
-
-li a {
     display: block;
-    
-    color: rgb(255, 255, 255);
+    color: black;
     text-align: center;
-    padding: 16px 14px;
-    font-size: 20px;
-    font-family: 'Ropa Sans', sans-serif;
+    padding: 14px 16px;
     text-decoration: none;
+    font-size: 17px;
 }
 
- li a:hover {
+.navbar-scrolled a:hover {
+    background-color: #ddd;
     text-decoration: underline;
-} 
-.dropdown {
-    /* float: left; */
-    overflow: hidden;
-    margin-left: 80%;
+    color: black;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
     
 }
 
+p{
+    font-family: 'Kanit', sans-serif;
+}
+
+
+li a:hover {
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    text-decoration: underline;
+    color: black;
+}
+
+.navbar-content {
+    margin-left: 30%;
+}
+
+.navbar-content a{
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+}
+
+.firstsection {
+    margin-left: 3%;
+    margin-right: auto;
+}
+
+.second-section {
+    float: right;
+}
+
+.dropdown {
+    overflow: hidden;
+}
+.dropbtn {
+    padding: 18px 5.5px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .dropdown .dropbtn {
     font-size: 16px;    
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit;
-    margin-top:20%;
-   
+}
+.dropbtn:hover {
+    background-color: #ddd;
 }
 
-/* .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-} */
 
 .dropdown-content {
     display: none;
-   position: absolute;
+    position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    
-    
 }
 
 .dropdown-content a {
     float: none;
     color: black;
-    
-    padding: 16px 12px;
     text-decoration: none;
     display: block;
-    text-align: left;
-    
-    
+    text-align: center;
+    font-family: inherit;
 }
 
-/* .dropdown-content a:hover {
-    background-color: #ddd;
-} */
 
 .dropdown:hover .dropdown-content {
     display: block;
-    
+    background-color: #ddd;
 } 
 
-
-.logo{
-
-margin-left: -10%;
+.logo {
+    float: left;
 }
 
-.firstsection{
 
-    margin-left: 8%;
-}
-.navbar-content{
-    margin-left: 30%;
-        
+#myButtontop {
+/* display: none; */
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+font-size: 18px;
+border: none;
+outline: none;
+background-color: rgba(43, 41, 41, 0.973);
+color: white;
+cursor: pointer;
+padding: 15px;
+border-radius: 4px;
 }
 
-.navbar-content a{
-    
-    /* margin-left: 20%; */
-    padding-left: 20px;
-    margin-top:20%;
-    
+#myButtontop:hover {
+background-color:orangered;
 }
-
-.navbar{
-    opacity: 0.7;
-    filter:alpha (opacity=70);  /*IE8 earlier*/
-   
-    z-index: 1;
-    
-    
-    
-}
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  #myButtontop {
-    /* display: none; */
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: rgba(43, 41, 41, 0.973);
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-  }
-  
-  #myButtontop:hover {
-    background-color:orangered;
-  }
 
 .footer {
 background-color: rgba(26, 24, 25, 0.5);
-    height: 50px; /* ความสูงของ footer */
-    display: block;
-    text-align: center;
+height: 50px; /* ความสูงของ footer */
+display: block;
+text-align: center;
 }  

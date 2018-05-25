@@ -16,73 +16,74 @@
     {% endblock %}
 </head>
 <body>
-    <div id="header">
-        {% block header %}
-        <div class="navbar" id="navbar"><ul>
-          <div class="logo" >
-            <li><a class="index" href="index.html"><img src="../static/img/logoOn.png" style="width: 20%;" ></a></li>
-          </div>
-          <div class="navbar-content">
-            <div class="firstsection">
-            <li><a class="#active" href="#home">Review</a></li>
-            <li><a href="#news">Event</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#aboudft">About</a></li>
+  <div id="header">
+    {% block header %}
+    <div class="navbar" id="navbar">
+        <div class="logo" >
+          <a href="index.html"><img src="../static/img/logoOn2.png" style="width: 83%"></a>
+        </div>
+        <div class="navbar-content">
+          <div class="firstsection">
+            <a class="#active" href="#home">Review</a>
+            <a href="#news">Event</a>
             {% if username %}
-            <li><a href="{{ url_for('logout') }}" onclick="return Confirm()">Log out</a></li>
-            <p>Hello!, {{ username }}</p>
-            </div>
-                         
+            <a href="{{ url_for('user_review') }}">User Review</a>
             {% else %}
-            
-            
+            <a href="{{ url_for('login') }}" onclick="return Confirmlogin()" >User Review</a>
+            {% endif %}
+            <a href="contact.html">Contact</a>
+            <a href="#aboudft">About</a>
+            {% if username %}
+            <a href="{{ url_for('logout') }}" onclick="return ConfirmLogOut()">Log out</a>
+            <p>Hello!, {{ username }}</p>
+          </div>
+                      
+          {% else %}
+          
+          <div class="second-section">
             <div class="dropdown">
-              <li>
-                <button class="dropbtn"><img src="../static/img/avatar.png" style="width: 50%;" >  
+                <button class="dropbtn"><img src="../static/img/avatar.png" style="width: 40%;" >  
                     <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="login.html">Login</a>
-                    <a href="register.html">Register</a>
-                  </div>
-              </li>
-              <!-- <li>
-                <a href="#login"></a>
-              </li> -->
+                </button>
+                <div class="dropdown-content">
+                  <a href="login.html">Login</a>
+                  <a href="register.html">Register</a>
+                </div>
             </div>
             {% endif %}
           </div>
-        </ul>
+       </div>
       </div>
-      
         {% endblock %}
-      </div>
+      
       <button onclick="topFunction()" id="myButtontop" title="Go to top">Top</button>
       <div id="content">{% block content %} >{% endblock %}</div>
+
       
-      <script>
-        // When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
+  <script>
 
-// Get the navbar
-var navbar = document.getElementById("navbar");
+    function ConfirmLogOut(){
+      if (!confirm("Are you sure?")){
+        return false
+      }
+    }
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+    function Confirmlogin(){
+      if (!confirm("Please Login")){
+        return false
+      }
+    }
+    
+    var nav = document.getElementById("navbar");
+    window.onscroll = function(){
+      if(window.pageYOffset > 10) {
+        nav.className = "navbar-scrolled"; 
+      } else {
+        nav.className = "navbar";
+      }
+    }
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-        function Confirm(){
-          if (!confirm("Are you sure?")){
-            return false
-          }
-        }
+
 
 
 // from top button
@@ -103,5 +104,6 @@ function myFunction() {
 
       </script>
        <div class="footer"> <p style="color: rgba(255, 255, 255, 0.555);">On My Wy | Copyright &copy;  2018 By Chanikan Rujimetineekul, Jidapa Dumrongsombat, Kamolwan Kladjed</p></div>
+  
 </body>
 </html>
