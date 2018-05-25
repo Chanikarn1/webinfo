@@ -7,11 +7,11 @@
   
   body { font-family: sans-serif; }
   
-  .gallery {
+  /* .gallery {
     background: #EEE;
   }
-  
-  .gallery-cell {
+   */
+  /*.gallery-cell {
     width: 28%;
     height: 200px;
     margin-right: 10px;
@@ -24,14 +24,14 @@
   }
   
   /* cell number */
-  .gallery-cell:before {
+  /* .gallery-cell:before {
     display: block;
     text-align: center;
     content: counter(gallery-cell);
     line-height: 200px;
     font-size: 80px;
     color: white;
-  }
+  } */
 
   ::-webkit-scrollbar {
     width: 1px;
