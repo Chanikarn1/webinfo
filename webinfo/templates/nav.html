@@ -6,13 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   {% block head %}
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
     <title>{% block title %}{% endblock %} - My Webpage</title>
     
-<link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
-
-
-
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">  
     {% endblock %}
 </head>
 <body>
@@ -32,7 +30,6 @@
             <a href="{{ url_for('login') }}" onclick="return Confirmlogin()" >User Review</a>
             {% endif %}
             <a href="contact.html">Contact</a>
-            <a href="#aboudft">About</a>
             {% if username %}
             <a href="{{ url_for('logout') }}" onclick="return ConfirmLogOut()">Log out</a>
             <p>Hello!, {{ username }}</p>
@@ -52,16 +49,18 @@
             </div>
             {% endif %}
           </div>
-        </div>
-    {% endblock %}
+        {% endblock %}
+      </div>
     </div>
   </div>
+  <button onclick="topFunction()" id="myButtontop" title="Go to top">Top</button>
   {% block content %}
     <!-- index -->
   {% endblock %}
-      
+  <div class="footer">
+      <p style="color: rgba(255, 255, 255, 0.555);">On My Wy | Copyright &copy;  2018 By Chanikan Rujimetineekul, Jidapa Dumrongsombat, Kamolwan Kladjed</p>
+  </div>
   <script>
-
     function ConfirmLogOut(){
       if (!confirm("Are you sure?")){
         return false
@@ -73,16 +72,26 @@
         return false
       }
     }
-    
-    var nav = document.getElementById("navbar");
-    window.onscroll = function(){
-      if(window.pageYOffset > 10) {
-        nav.className = "navbar-scrolled"; 
-      } else {
-        nav.className = "navbar";
-      }
-    }
 
+// from top button
+  var nav = document.getElementById("navbar");
+  window.onscroll = function() {scrollbtn()};
+  function scrollbtn() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myButtontop").style.display = "block";
+          nav.className = "navbar-scrolled"; 
+      } else {
+          document.getElementById("myButtontop").style.display = "none";
+          nav.className = "navbar";
+      }
+  }
+  
+
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      document.getElementById("myButtontop").style.display = "none"; 
+  }
 
   </script>
 </body>

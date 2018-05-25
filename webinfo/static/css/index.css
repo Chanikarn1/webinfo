@@ -10,6 +10,7 @@
     position: relative;
 }
 .mySlides {
+
 }
 
 .prev, .next {
@@ -107,8 +108,7 @@ input[type=text] {
 }
 
 .box-content{
-    margin:0 auto;
-    position: absolute;
+    margin-top:40px;
     z-index: 4;
 }
 div.gallery {
@@ -147,7 +147,7 @@ div.heart-icon {
     display:inline;
 }
 div.desc {
-
+    font-family: 'Kanit', sans-serif;
     text-align: center;
 }
 

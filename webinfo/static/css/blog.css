@@ -1,0 +1,31 @@
+
+
+
+#mainpic{
+    width: 50%;
+    height: auto;
+    margin-top: 5%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+.viewpic{
+    width: 40%;
+    height: auto;
+    
+    }
+.viewpic1{
+    width: 60%;
+    height: auto;
+    
+    }
+
+.mar {
+    margin-right: 10%;
+        margin-left: 10%;
+    }
+
+.icon{
+    width: 7%;
+    height: auto;
+
+}

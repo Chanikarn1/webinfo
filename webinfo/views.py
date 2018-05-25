@@ -116,6 +116,7 @@ def contact():
 @app.route("/event.html")
 def event():
     return render_template("web/event.html")
+ 
     
 @app.route("/blog3.html")
 def blog3():
@@ -263,4 +264,27 @@ def logout():
     session['username'] = ''
     flash('You were logged out')
     return redirect(url_for('index'))
-    
+
+@app.route("/review3.html")
+def review3():
+    return render_template("/review3.html")
+
+@app.route("/event1.html")
+def event1():
+    return render_template("/event1.html")
+
+@app.route("/review.html")
+def review():
+    return render_template("/review.html")
+
+@app.route("/review4.html")
+def review4():
+    return render_template("/review4.html")
+
+@app.route("/review5.html")
+def review5():
+    return render_template("/review5.html")
+
+@app.route("/review6.html")
+def review6():
+    return render_template("/review6.html")

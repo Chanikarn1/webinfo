@@ -17,10 +17,10 @@ body{
 }
 .navbar-scrolled {
     position: fixed;
-    z-index: 5;
     width: 100%;
     opacity: 0.9;
     background-color: skyblue;
+    z-index: 5;
 }
 
 .navbar-scrolled a {
@@ -46,15 +46,6 @@ body{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    
-}
-
-p{
-    font-family: 'Kanit', sans-serif;
-}
-
-
-li a:hover {
     font-size: 17px;
 }
 
@@ -65,6 +56,7 @@ li a:hover {
 }
 
 .navbar-content {
+    font-family: 'Kanit', sans-serif;
     margin-left: 30%;
 }
 
@@ -74,7 +66,7 @@ li a:hover {
 }
 
 .firstsection {
-    margin-left: 3%;
+    margin-left: 10%;
     margin-right: auto;
 }
 
@@ -127,4 +119,41 @@ li a:hover {
 
 .logo {
     float: left;
+}
+#myButtontop {
+    /* display: none; */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(43, 41, 41, 0.973);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myButtontop:hover {
+    background-color:orangered;
+  }
+
+.footer {
+    background-color: rgba(26, 24, 25, 0.5);
+    
+    height: 50px; /* ความสูงของ footer */
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}  
+.footer p {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}
+p,h1,h2,h3,h4 {
+    font-family: 'Kanit', sans-serif;
 }

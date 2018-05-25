@@ -9,3 +9,5 @@ navbar.style.background = "transparent";
 
 }
 }
+
+  
