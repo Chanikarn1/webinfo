@@ -137,7 +137,7 @@ div.gallery img {
 div.image-frame {
     overflow: hidden;
     height: 240px;
-    border: 1px solid gray;
+    border: 1px solid  #ccc;
 }
 div.heart-icon {
     position: relative;
