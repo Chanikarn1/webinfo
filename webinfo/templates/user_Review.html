@@ -2,38 +2,80 @@
 {% block title %}Index{% endblock %}
 {% block head %}
   {{ super() }}
-  
+  <style>
+
+      .header{
+        color: white;
+      background-color: rgba(6, 9, 53, 0.842);
+      padding: 2px;
+      }
+      .input{
+        width: 30%;
+        background-color: green;
+      }
+      </style>
+      
 {% endblock %}
 
 
 {% block content %}
+<br>
+<div class="header">
+    <center>
 <h1>
-เพิ่มทริป
+รีวิวทริป <img src="../static/img/notepad.png" class="notepad">
+
 </h1>
+</center>
+</div>
+
 <!-- <form method="POST"> -->
     <!-- <input type="file" name="pic" accept="image/*">
     
     <input type="text"> -->
-    
+    <div class="input">
     <form action="{{  url_for('.user_review') }}" method="POST" enctype="multipart/form-data" >
     {{test}}
     {% if error %}
     {{error}}
     {% endif %}
-   
-     <textarea name="msg"></textarea>
+    <table>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+</tr>
 
-          Enter a date before 1980-01-01:<br>
-      <input type="text" name="goday" >วันที่ไป<br><br>
-      <input type="text" name="backday" >วันที่กลับ<br><br>
-      <input type="text" name="money" >เงิน<br><br>
-      <input type="text" name="NameTrip" >ชื่อทริป<br><br>
+    </table>
+    <label><p>ชื่อทริป : <textarea name="msg" ></textarea></p></label>
+     
+     <label><p>ชื่อทริป : <input type="text" name="NameTrip" ></p></label>
+     <label><p>วันเดินทางไป : <input type="text" name="goday" > </p></label>
+     <label><p>วันเดินทางกลับ : <input type="text" name="backday" > </p></label>
+     <label><p>งบประมาณ : <input type="text" name="money" > </p></label>
+     
+          <br><input type="file" name="file" accept="image/*"></p>
+           
       
-      <input type="file" name="file" accept="image/*">
 
       <input type="submit" value="send" >
     </form>
-
+  </div>
    <!-- <script>
     function Confirm(){
       if (!confirm("Are you sure?")){

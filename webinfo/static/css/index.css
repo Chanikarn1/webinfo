@@ -81,7 +81,7 @@
 }
 
 .search{
-    z-index: 4;
+    z-index: 3;
     margin-top:17.5%;
     width:100%;
     height:100%;
@@ -108,6 +108,8 @@ input[type=text] {
 }
 
 .box-content{
+    position: relative;
+    margin:0 auto;
     margin-top:40px;
     z-index: 4;
 }
@@ -142,7 +144,6 @@ div.image-frame {
 div.heart-icon {
     position: relative;
     margin-right:3%;
-    
     margin-top: 3%;
     display:inline;
 }
