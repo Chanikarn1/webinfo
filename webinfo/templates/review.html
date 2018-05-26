@@ -14,6 +14,10 @@
 .leftcolumn:hover a{
   color: rgb(68, 0, 255)
 }
+h1{
+  float: left;
+  color: rgb(61, 19, 175)
+}
   </style>
   {% endblock %}
 
@@ -27,13 +31,14 @@
 
 <div> <!-- start blog-->
     <div class="row">
+      <h1>รีวิวโดนๆ ------------------------------------------------------------</h1>
         <!--blog review1-->
             <div class="leftcolumn"> <a href="review1.html">
               <div class="card"style="background-color: rgba(122, 163, 194, 0.2);">
                 <div><center><img src="../static/img/review1/1.jpg" class="fakeimg" style="width:340px"></center></div>  
             </div> 
-            <center><p>เมื่อใจต้องการทะเลจึงเซไปเกาะกูด By Sarun</p></center>
-            </div></a>
+            <center><p>เมื่อใจต้องการทะเลจึงเซไปเกาะกูด By Sarun</p></center></a>
+            </div>
          <!--End blog review1-->  
          <!--blog review2-->
          <div class="leftcolumn"><a href="review1.html">
@@ -41,7 +46,7 @@
                   <div><center><img src="../static/img/review2/1.jpg" class="fakeimg" style="width:340px"></center></div>  
               </div> 
               <center><p>"ล่องแพเขื่อนกิ่วลม" สัมผัสกับความชิลที่มีอยู่จริงบนผืนน้ำจังหวัดลำปาง By Peeranut P.</p></center>
-              </div></a>
+            </a></div>
            <!--End blog review2-->  
            <!--blog review3-->
            <div class="leftcolumn"><a href="review3.html">
@@ -49,7 +54,7 @@
                   <div><center><img src="../static/img/review3/1.jpg" class="fakeimg" style="width:340px"></center></div>  
               </div> 
               <center><p>Make Awake คุ้มค่าตื่นที่ จ.ระนอง ไม่ไปไม่ได้แล้ว!สัมผัสกับความชิลที่มีอยู่จริงบนผืนน้ำจังหวัดลำปาง</p></center>
-              </div></a>
+            </a></div>
            <!--End blog review3-->   
 
            <!--blog review4-->
@@ -58,7 +63,7 @@
                   <div><center><img src="../static/img/review4/1.jpg" class="fakeimg" style="width:340px"></center></div>  
               </div> 
               <center><p>ร้านกาแฟ 180 องศา จุดเช็คอินชมทะเลหมอกแห่งใหม่ของเขาค้อ</p></center>
-              </div></a>
+            </a></div>
            <!--End blog review4-->  
            <!--blog review5-->
            <div class="leftcolumn"><a href="review5.html">
@@ -66,7 +71,7 @@
                   <div><center><img src="../static/img/review5/3.jpg" class="fakeimg" style="width:340px"></center></div>  
               </div> 
               <center><p>เกาะขายหัวเราะ! เมื่อเกาะร้างในการ์ตูนขายหัวเราะมีอยู่จริงในประเทศไทย</p></center>
-              </div></a>
+            </a> </div>
            <!--End blog review5-->  
            <!--blog review6-->
            <div class="leftcolumn"><a href="review6.html">
@@ -74,15 +79,26 @@
                   <div><center><img src="../static/img/review6/1.jpg" class="fakeimg" style="width:340px"></center></div>  
               </div> 
               <center><p>กม.7 โฮมสเตย์ จุดชมวิวทะเลหมอก สวรรค์บนดินแห่งเบตง</p></center>
-              </div></a>
-           <!--End blog review6-->  
-         
-            
-            
-          </div><!-- End div class="row"-->
-         
+            </a></div>
+           <!--End blog review6--> 
+           
+             
+           <!-- End div class="row"-->
+       
 </div><!-- end blog-->
-
+<h1>แชร์ประสบการณ์ ----------------------------------------------------------</h1>  
+<div class="row">
+    {% for x in usertrip %}
+        <div class="leftcolumn"><a href="{{url_for('detail',nametrip=x.NameTrip)}}">
+              <div class="card"style="background-color: rgba(122, 163, 194, 0.2);">
+                <div><center><img src="../static/img/ImgUpload/{{x.ImageName}}" class="fakeimg" style="width:340px"></center></div>  
+              </div> 
+                    <center><p>{{x.NameTrip}}</p></center></a>
+            </div>
+            {% endfor %}
+          </div>
+                   
+          </div>
 
 
     

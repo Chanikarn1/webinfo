@@ -4,6 +4,7 @@
   {{ super() }}
   <style>
   .head{
+    margin-top: 10%;
     width: 98%;
     background-color: rgba(56, 221, 139, 0.356);
     border-radius: 15px;
@@ -17,6 +18,7 @@
     padding-left: 2%;
     padding-top: 2%;
     padding-bottom: 2%;
+    margin-bottom: 20%;
     
   }
   .world{
@@ -24,13 +26,15 @@
     position:absolute;
     margin-left: 5%;
   }
+  
   </style>
 {% endblock %}
 
 
 {% block content %}
 <center>
-<img src="../static/img/world.png" class="world"> 
+<div class="all">
+ 
 <br><br>
 <div class="head">
 <h1>{{topic}}    </h1>
@@ -46,10 +50,11 @@
     
   <br>
 </center>
+
   <div class="content">
   <p>{{detail}}<p>
     </div>
-
+  </div>
 
 
 {% endblock %}

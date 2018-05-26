@@ -40,6 +40,7 @@ input[type=submit]:hover {
     padding-top: 1%;
     margin-right: 40%;
     margin-left: 10%;
+    margin-top: 10%;
 }
 .box-input{
 
@@ -53,7 +54,7 @@ input[type=submit]:hover {
 }
 .container-small{
     width:30%;
-    height:50%;
+    height:60%;
     border-radius: 5px;
     background-color:white;
     padding-right: 1%;
@@ -64,6 +65,7 @@ input[type=submit]:hover {
     margin-left: 50%;
     margin-top: -30%;
     box-shadow: 3px 3px 5px #888888;
+    margin-bottom: 10%;
     
 }
 #map {
@@ -75,9 +77,10 @@ input[type=submit]:hover {
 }
 
 .footer {
-    background-color: #FF9999;
+    margin-bottom: 0%;
+    background-color:skyblue;
     padding: 10px;
-    margin-bottom: 0px;
+    
 
 
 }

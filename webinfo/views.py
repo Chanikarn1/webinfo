@@ -275,6 +275,7 @@ def detail(nametrip):
     
     username = session.get('username', '')
     session['username'] = username
+
     trip = ReviewByUser.query.filter_by(NameTrip=nametrip).first() #nametrip คือค่าที่ส่งมาจากอีกหน้า 
     tripname = trip.NameTrip                                        #NameTrip คือ Attribute ของตาราง ชื่อ ReviewByUser
     back_date = trip.back_date                                                      #nametrip เป็นชื่อตัวแปรที่เก็บค่าของอ็อบเจคที่ดึงดาต้าเบสขึ้นมา
@@ -301,7 +302,11 @@ def event1():
 
 @app.route("/review.html")
 def review():
-    return render_template("/review.html")
+    usertrip = ReviewByUser.query.all()
+   
+    return render_template("review.html",usertrip=usertrip)
+    # return render_template("review.html",usertrip=usertrip)
+   
 
 @app.route("/review4.html")
 def review4():
@@ -314,3 +319,4 @@ def review5():
 @app.route("/review6.html")
 def review6():
     return render_template("/review6.html")
+
