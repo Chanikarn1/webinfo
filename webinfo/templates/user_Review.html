@@ -1,5 +1,6 @@
 {% extends "nav.html" %}
 {% block title %}Index{% endblock %}
+<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 {% block head %}
   {{ super() }}
   <style>
@@ -8,10 +9,36 @@
         color: white;
       background-color: rgba(6, 9, 53, 0.842);
       padding: 2px;
+      margin-top: 10%;
       }
       .input{
-        width: 30%;
-        background-color: green;
+        width:40%;
+        /* height: 70%; */
+       
+        position: relative;
+        margin-bottom: 10%;
+       padding: 2px;
+       
+      }
+      .tableinput{
+        margin-top: 30%;
+        font-family: 'Kanit', sans-serif;
+        width: 100%;
+        padding: 5px;
+      }
+      .button{
+        font-size: 20px;
+        background-color: rgb(40, 113, 196); /* Green */
+    border: none;
+    color: white;
+    /* padding: 15px 32px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+        /* height: 10px; */
       }
       </style>
       
@@ -28,54 +55,55 @@
 </h1>
 </center>
 </div>
+<center>
 
-<!-- <form method="POST"> -->
-    <!-- <input type="file" name="pic" accept="image/*">
     
-    <input type="text"> -->
+    
     <div class="input">
     <form action="{{  url_for('.user_review') }}" method="POST" enctype="multipart/form-data" >
     {{test}}
     {% if error %}
     {{error}}
     {% endif %}
-    <table>
+   
+  <table class="tableinput">
 <tr>
-<td></td>
-<td></td>
+<td>ชื่อทริป : </td>
+<td><input type="text" name="NameTrip" style="width: 100%;height: 50px"></td>
 </tr>
 <tr>
-    <td></td>
-    <td></td>
+    <td>วันเดินทางไป : </td>
+    <td><input type="text" name="goday" style="width: 100%;height: 50px"></td>
 </tr>
 <tr>
-    <td></td>
-    <td></td>
+    <td>วันเดินทางกลับ : </td>
+    <td><input type="text" name="backday" style="width: 100%;height: 50px"></td>
 </tr>
 <tr>
-    <td></td>
-    <td></td>
+    <td>งบประมาณ : </td>
+    <td><input type="text" name="money" style="width: 100%;height: 50px;"></td>
 </tr>
 <tr>
-    <td></td>
-    <td></td>
+    <td>ข้อความ : </td>
+    <td><textarea name="msg"style="width: 100%;height: 200px;"></textarea></td>
 </tr>
 
     </table>
-    <label><p>ชื่อทริป : <textarea name="msg" ></textarea></p></label>
-     
+    
+<!--      
      <label><p>ชื่อทริป : <input type="text" name="NameTrip" ></p></label>
      <label><p>วันเดินทางไป : <input type="text" name="goday" > </p></label>
      <label><p>วันเดินทางกลับ : <input type="text" name="backday" > </p></label>
-     <label><p>งบประมาณ : <input type="text" name="money" > </p></label>
+     <label><p>งบประมาณ : <input type="text" name="money" > </p></label> -->
      
-          <br><input type="file" name="file" accept="image/*"></p>
+          <br><p>รูปภาพ : <input type="file" name="file" accept="image/*"></p>
            
       
 
-      <input type="submit" value="send" >
+      <input type="submit" value="send" class="button">
     </form>
   </div>
+</center>
    <!-- <script>
     function Confirm(){
       if (!confirm("Are you sure?")){

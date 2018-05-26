@@ -137,12 +137,12 @@ body{
   }
   
   #myButtontop:hover {
-    background-color:orangered;
+    background-color:rgb(23, 98, 128);
   }
 
 .footer {
-    background-color: red;
-    color: white;
+    background-color: skyblue;
+    color: rgb(0, 0, 0);
     position: absolute;
     width: 100%;
     clear: both;
