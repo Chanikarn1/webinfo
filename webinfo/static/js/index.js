@@ -49,7 +49,7 @@ function carousel() {
 } 
 
 function myfunction(x){
-    var a = document.getElementsByClassName("fa")[x];
+    var a = document.getElementsByClassName("fa")[x-1];
     if (a.style.color == "red") {
         a.style.color = "gray";
     } else {

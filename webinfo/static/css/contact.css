@@ -94,3 +94,16 @@ input[type=submit]:hover {
 .fa:hover {
   color: darkblue;
 }
+
+.google-map {
+    position: relative;
+    margin-bottom: 370px;
+    height:200px;
+    width:100%;
+    margin-top:1px;
+}
+
+#gmap_canvas {
+    height:510px;
+    width:100%;
+}
